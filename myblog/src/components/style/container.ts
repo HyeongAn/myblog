@@ -35,7 +35,6 @@ export const HeadContainer = style.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: relative;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
 `
 export const HeadLinkContainer = style.div`
@@ -47,14 +46,11 @@ export const HeadLinkContainer = style.div`
   right: 10px;
   color: white;
 `
-export const FooterContainer = style.section`
+export const FooterContainer = style.footer`
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 120px;
   align-items: center;
-  position: relative;
-  bottom: 0px;
-  padding: 10px;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
 `
 

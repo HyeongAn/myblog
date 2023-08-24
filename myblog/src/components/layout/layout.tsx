@@ -8,7 +8,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <RootStyleRegistry>
       <Header />
-      {children}
+      <main style={{ flex: '1' }}>{children}</main>
       <Footer />
     </RootStyleRegistry>
   )

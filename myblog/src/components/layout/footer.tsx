@@ -3,7 +3,7 @@ import { FooterContainer, FooterLinkContainer } from '../style/container'
 const Footer = () => {
   return (
     <FooterContainer>
-      <div>
+      <div style={{ width: '100%', padding: '10px' }}>
         <p>{`CopyRight. YoonHu's Blog`}</p>
         <p>FrontEnd Developer</p>
         <p>공부한것을 적어두고 기록해두는 블로그입니다.</p>
