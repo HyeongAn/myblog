@@ -7,7 +7,6 @@ const Home = async () => {
   const postData = (await getPosts()).map((post) => post.data)
   return (
     <ColumnLeftContainer>
-      <h1>{`👨🏻‍💻 YoonHu's Blog`}</h1>
       <ColumnCenterContainer style={{ padding: '10px' }}>
         <Main />
         <Slider postData={postData} />

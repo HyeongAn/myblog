@@ -35,6 +35,8 @@ export const HeadContainer = style.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 55px;
+  position: relative;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
 `
 export const HeadLinkContainer = style.div`
@@ -49,7 +51,7 @@ export const HeadLinkContainer = style.div`
 export const FooterContainer = style.footer`
   display: flex;
   width: 100%;
-  height: 120px;
+  min-height: 120px;
   align-items: center;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
 `
@@ -68,4 +70,13 @@ export const CardContainer = style.section`
   background-color: white;
   box-shadow: 0 0 8px rgb(0 0 0 / 20%);
   margin: 0 20px;
+`
+export const CardSlider = style.div`
+  maxWidth: 960px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
 `

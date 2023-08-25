@@ -2,14 +2,23 @@ import Image from 'next/image'
 import profilePicture from '../../../assets/profile.jpeg'
 import notionIcon from '../../../assets/Notion-logo.svg'
 import gitIcon from '../../../assets/Git-logo.svg'
-import { ColumnContainer, RowCenterContainer, ColumnCenterContainer, RowLeftContainer } from '../style/container'
+import {
+  ColumnContainer,
+  RowCenterContainer,
+  ColumnCenterContainer,
+  RowLeftContainer,
+  ColumnLeftContainer,
+} from '../style/container'
 import IconButtons from '../style/buttons/iconButton'
 
 const Main = () => {
   return (
     <ColumnCenterContainer>
-      <RowCenterContainer>
-        <Image style={{ borderRadius: '12px' }} src={profilePicture} alt="profileImage" />
+      <RowCenterContainer style={{ maxWidth: '700px' }}>
+        <ColumnLeftContainer>
+          <h1>{`👨🏻‍💻 YoonHu's Blog`}</h1>
+          <Image style={{ borderRadius: '12px' }} src={profilePicture} alt="profileImage" />
+        </ColumnLeftContainer>
         <ColumnContainer style={{ padding: '0 10px 0 20px' }}>
           <h3>프론트엔드 개발자 권형안입니다.</h3>
           <p>
