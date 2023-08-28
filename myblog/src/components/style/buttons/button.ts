@@ -32,4 +32,8 @@ export const SliderButton = style.button`
   border: none;
   cursor: pointer;
   margin: 0 5px;
+
+  @media (max-width: 390px) {
+    display: none;
+  }
 `

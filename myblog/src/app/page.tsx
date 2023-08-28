@@ -6,12 +6,10 @@ import { getPosts } from '../../lib/ssg.module'
 const Home = async () => {
   const postData = (await getPosts()).map((post) => post.data)
   return (
-    <ColumnLeftContainer>
-      <ColumnCenterContainer style={{ padding: '10px' }}>
-        <Main />
-        <Slider postData={postData} />
-      </ColumnCenterContainer>
-    </ColumnLeftContainer>
+    <ColumnCenterContainer style={{ height: '100%' }}>
+      <Main />
+      <Slider postData={postData} />
+    </ColumnCenterContainer>
   )
 }
 

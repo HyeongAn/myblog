@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { CardSlider, CarouselSlider, RowCenterContainer } from '../style/container'
 import SliderCard from './slider-card'
 import { PostDataType, SliderProps } from '../../../types/props'
 import { SliderButton } from '../style/buttons/button'
 import leftArrow from '../../../assets/svg/left-arrow.svg'
 import rightArrow from '../../../assets/svg/right-arrow.svg'
 import Image from 'next/image'
+import { CardSlider, CarouselSlider, SlideContainer } from '../style/slider'
 
 const Slider = ({ postData }: SliderProps) => {
   const slideRef = useRef<HTMLDivElement>(null)
@@ -91,7 +91,7 @@ const Slider = ({ postData }: SliderProps) => {
   }
 
   return (
-    <RowCenterContainer style={{ maxWidth: '1150px', width: '100%', height: '500px' }}>
+    <SlideContainer>
       <SliderButton onClick={() => onPrevClick()}>
         <Image src={leftArrow} alt="left arrow image" width="25" height="25" />
       </SliderButton>
@@ -103,7 +103,7 @@ const Slider = ({ postData }: SliderProps) => {
       <SliderButton onClick={() => onNextClick()}>
         <Image src={rightArrow} alt="right arrow image" width="25" height="25" />
       </SliderButton>
-    </RowCenterContainer>
+    </SlideContainer>
   )
 }
 
