@@ -2,35 +2,35 @@
 
 import style from 'styled-components'
 
-export const ColumnCenterContainer = style.section`
+export const ColumnCenterContainer = style.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
-export const ColumnLeftContainer = style.section`
+export const ColumnLeftContainer = style.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
 `
 
-export const ColumnContainer = style.section`
+export const ColumnContainer = style.div`
   display: flex;
   flex-direction: column;
 `
 
-export const RowCenterContainer = style.section`
+export const RowCenterContainer = style.div`
 display: flex;
 justify-content: center;
 align-items: center;
 `
 
-export const RowLeftContainer = style.section`
+export const RowLeftContainer = style.div`
   display: flex;
   align-items: center;
 `
 
-export const HeadContainer = style.section`
+export const HeadContainer = style.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,20 +63,21 @@ export const FooterLinkContainer = style.div`
   align-items: center;
 `
 
-export const CardContainer = style.section`
+export const CardContainer = style.div`
   width: 320px;
-  height: 410px;
-  border-radius: 20px;
+  height: 420px;
   background-color: white;
-  box-shadow: 0 0 8px rgb(0 0 0 / 20%);
-  margin: 0 20px;
 `
 export const CardSlider = style.div`
-  maxWidth: 960px;
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+`
+export const CarouselSlider = style.div`
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 `

@@ -1,12 +1,12 @@
 'use client'
 import Image from 'next/image'
-import { SlideCardProps, SliderProps } from '../../../types/props'
+import { SlideCardProps } from '../../../types/props'
 import { CardContainer, ColumnCenterContainer, ColumnLeftContainer } from '../style/container'
 
 const SliderCard = ({ data }: SlideCardProps) => {
   return (
     <CardContainer>
-      <ColumnCenterContainer>
+      <ColumnCenterContainer style={{ borderRadius: '20px', margin: '0 20px', boxShadow: '0 0 8px rgb(0 0 0 / 20%)' }}>
         <Image
           style={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px' }}
           width={320}
@@ -16,7 +16,7 @@ const SliderCard = ({ data }: SlideCardProps) => {
         />
         <ColumnLeftContainer style={{ padding: '10px', maxHeight: '180px' }}>
           <h1 style={{ margin: '0', fontSize: '20px' }}>{data.title}</h1>
-          <span style={{ height: '130px' }}>{data.description}</span>
+          <span style={{ height: '140px' }}>{data.description}</span>
         </ColumnLeftContainer>
       </ColumnCenterContainer>
     </CardContainer>
