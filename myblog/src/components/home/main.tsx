@@ -3,23 +3,23 @@ import profilePicture from '../../../assets/profile.jpeg'
 import notionIcon from '../../../assets/Notion-logo.svg'
 import gitIcon from '../../../assets/Git-logo.svg'
 import {
-  ColumnContainer,
-  RowCenterContainer,
   ColumnCenterContainer,
   RowLeftContainer,
-  ColumnLeftContainer,
+  ContentContainer,
+  ContentHeaderContainer,
+  ContentBodyContainer,
 } from '../style/container'
 import IconButtons from '../style/buttons/iconButton'
 
 const Main = () => {
   return (
     <ColumnCenterContainer>
-      <RowCenterContainer style={{ maxWidth: '700px' }}>
-        <ColumnLeftContainer>
-          <h1>{`👨🏻‍💻 YoonHu's Blog`}</h1>
+      <ContentContainer>
+        <ContentHeaderContainer>
+          <h1>{`👨🏻‍💻 YoonHu's Intro`}</h1>
           <Image style={{ borderRadius: '12px' }} src={profilePicture} alt="profileImage" />
-        </ColumnLeftContainer>
-        <ColumnContainer style={{ padding: '0 10px 0 20px' }}>
+        </ContentHeaderContainer>
+        <ContentBodyContainer>
           <h3>프론트엔드 개발자 권형안입니다.</h3>
           <p>
             좋아하는 것을 만들고 이를 통해 사용자의 더 나은 삶에 기여하고자 합니다.
@@ -36,8 +36,8 @@ const Main = () => {
             />
             <IconButtons src={gitIcon} alt="git icon" name="Git" href="https://github.com/HyeongAn" />
           </RowLeftContainer>
-        </ColumnContainer>
-      </RowCenterContainer>
+        </ContentBodyContainer>
+      </ContentContainer>
     </ColumnCenterContainer>
   )
 }
