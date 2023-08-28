@@ -21,3 +21,15 @@ export const IconButton = style.a`
     font-weight: 500;
   }
 `
+
+export const SliderButton = style.button`
+  width: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+`

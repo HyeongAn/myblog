@@ -27,13 +27,11 @@ export interface InconButtonProps {
 }
 
 export interface SliderProps {
-  postData: {
-    [key: string]: any
-  }[]
+  postData: PostDataType[]
 }
 
 export interface SlideCardProps {
-  data: {
-    [key: string]: any
-  }
+  data: PostDataType
 }
+
+export type PostDataType = Record<string, any>
