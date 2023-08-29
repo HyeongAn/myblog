@@ -37,3 +37,16 @@ export const SliderButton = style.button`
     display: none;
   }
 `
+
+export const CloseButton = style.button`
+  width 25px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+`

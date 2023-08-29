@@ -4,7 +4,8 @@ import { HeadContainer } from '../style/container'
 import { useContext, useEffect, useState } from 'react'
 import miniMenu from '../../../assets/svg/mini-menu.svg'
 import Image from 'next/image'
-import SlideMenu from '../slidemenu/slidemenu'
+import SlideMenu from '../slidemenu/slide-menu'
+import SlideMenuContents from '../slidemenu/slide-menu-contents'
 
 interface HeaderProps {
   xWidth: number
@@ -29,10 +30,6 @@ const Header = ({ xWidth }: HeaderProps) => {
       setIsOpen(false)
     }
   }
-
-  useEffect(() => {
-    console.log(xPosition)
-  }, [xPosition])
 
   return (
     <HeadContainer>
@@ -63,13 +60,12 @@ const Header = ({ xWidth }: HeaderProps) => {
         </div>
       )}
       <SlideMenu
-        toggleMenu={toggleMenu}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         xPosition={xPosition}
         setXPosition={setXPosition}
       >
-        <div>hi</div>
+        <SlideMenuContents toggleMenu={toggleMenu} />
       </SlideMenu>
     </HeadContainer>
   )
