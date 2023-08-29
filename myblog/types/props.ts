@@ -19,11 +19,17 @@ export interface PostData {
   slug: string
 }
 
-export interface InconButtonProps {
+export interface IconButtonProps {
   src: string | StaticImport
   alt: string
   name: string
   href?: string
+}
+
+export interface CloseButtonProps {
+  src: string | StaticImport
+  alt: string
+  clickEvent: () => void
 }
 
 export interface SliderProps {
@@ -35,3 +41,16 @@ export interface SlideCardProps {
 }
 
 export type PostDataType = Record<string, any>
+
+export interface SideMenuProp {
+  isOpen: boolean
+  setIsOpen: (state: boolean) => void
+  children: React.ReactNode
+  xPosition: number
+  setXPosition: (state: number) => void
+}
+
+export interface MenuListProps {
+  list: { name: string; href: string }
+  clickEvent: () => void
+}

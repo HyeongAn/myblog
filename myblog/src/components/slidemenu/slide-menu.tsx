@@ -1,18 +1,16 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { SlideMenuContainer } from '../style/menu'
+import { SlideMenuContainer } from '../style/menu/menu'
+import { SideMenuProp } from '../../../types/props'
 
-interface SideMenuProp {
-  isOpen: boolean
-  setIsOpen: (state: boolean) => void
-  children: React.ReactNode
-  xPosition: number
-  setXPosition: (state: number) => void
-  toggleMenu: () => void
-}
-
-const SlideMenu = ({ children, isOpen, setIsOpen, xPosition, setXPosition, toggleMenu }: SideMenuProp) => {
+const SlideMenu = ({
+  children,
+  isOpen,
+  setIsOpen,
+  xPosition,
+  setXPosition,
+}: SideMenuProp) => {
   const slideMenuRef = useRef<HTMLDivElement>(null)
 
   // 사이드바 외부 클릭시 닫히는 함수
@@ -33,11 +31,11 @@ const SlideMenu = ({ children, isOpen, setIsOpen, xPosition, setXPosition, toggl
   })
 
   return (
-    <SlideMenuContainer ref={slideMenuRef} style={{ transform: `translatex(-${xPosition}px)` }}>
-      <div>
-        <button onClick={() => toggleMenu()}>x</button>
-        <div>{children}</div>
-      </div>
+    <SlideMenuContainer
+      ref={slideMenuRef}
+      style={{ transform: `translatex(-${xPosition}px)` }}
+    >
+      <div>{children}</div>
     </SlideMenuContainer>
   )
 }
