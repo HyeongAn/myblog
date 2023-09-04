@@ -8,7 +8,7 @@ import RootStyleRegistry from '../../../lib/RootStyleRegistry'
 const Layout = ({ children }: LayoutProps) => {
   return (
     <RootStyleRegistry>
-      <Header xWidth={280} />
+      <Header xWidth={300} />
       <main style={{ flex: '1' }}>{children}</main>
       <Footer />
     </RootStyleRegistry>

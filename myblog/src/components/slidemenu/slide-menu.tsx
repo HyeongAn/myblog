@@ -18,7 +18,7 @@ const SlideMenu = ({
     const sideArea = slideMenuRef.current
     const sideChildren = sideArea === null ? null : sideArea.contains(e.target)
     if (isOpen && (!sideArea || !sideChildren)) {
-      setXPosition(-280)
+      setXPosition(-300)
       setIsOpen(false)
     }
   }
