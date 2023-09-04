@@ -40,6 +40,12 @@ export const RowLeftContainer = style.div`
   align-items: center;
 `
 
+export const RowBetweenContainer = style.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
 export const HeadContainer = style.div`
   display: flex;
   justify-content: center;

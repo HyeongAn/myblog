@@ -3,7 +3,7 @@
 import style from 'styled-components'
 
 export const SlideMenuContainer = style.div`
-  width: 280px;
+  width: 300px;
   height: 100%;
   background-color: rgba(238, 238, 238, 95%);
   display: flex;
@@ -36,13 +36,14 @@ export const SlideMenuBody = style.div`
 `
 
 export const SlideMenuUl = style.ul`
-  width: 100%;
-  margin: 0;
+  width: 80%;
+  margin: 0px;
   padding: 0;
 
   & li {
     width: 100%;
     height: 30px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
   }

@@ -15,7 +15,7 @@ const SlideMenuContents = ({ toggleMenu }: MenuContentsProps) => {
   return (
     <>
       <SlideMenuHeader>
-        <>menuContents</>
+        <span style={{ fontWeight: '500', fontSize: '20px' }}>Menu</span>
         <CloseButtons
           src={closeIcon}
           alt={'close-button'}
