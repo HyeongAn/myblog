@@ -19,8 +19,9 @@ export const SlideContainer = style.div`
 
 export const CardContainer = style.div`
 width: 320px;
-height: 420px;
+max-height: 420px;
 background-color: white;
+overflow: hidden;
 `
 
 export const CardSlider = style.div`

@@ -7,7 +7,8 @@ import Slider from '@/components/home/slider'
 import { getPosts } from '../../lib/ssg.module'
 
 const Home = async () => {
-  const postData = (await getPosts()).map((post) => post.data)
+  const postData = await getPosts()
+
   return (
     <ColumnContainer style={{ height: '100%' }}>
       <Main />

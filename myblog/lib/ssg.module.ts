@@ -14,7 +14,11 @@ export const getPosts = async () => {
       const post = fs.readFileSync(path.join(filePath, file), 'utf8')
       const { data, content } = matter(post)
       const slug = file.replace('.md', '')
-      const parseContent = unified().use(markdown).use(remark2rehype).use(html).processSync(content)
+      const parseContent = unified()
+        .use(markdown)
+        .use(remark2rehype)
+        .use(html)
+        .processSync(content)
       return {
         slug,
         data,
@@ -29,17 +33,22 @@ export const getPostData = async (slug: string) => {
   const filePath = path.join(process.cwd(), '__posts', `${slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
+  const parseContent = unified()
+    .use(markdown)
+    .use(remark2rehype)
+    .use(html)
+    .processSync(content)
 
   return {
     slug,
     data,
-    content,
+    content: parseContent.value,
   }
 }
 
-export const getPostSlug = () => {
+export const getPostSlug = async () => {
   const filePath = path.join(process.cwd(), '__posts')
-  const files = fs.readdirSync(filePath).map((file) => {
+  const files = await fs.readdirSync(filePath).map((file) => {
     return {
       params: {
         slug: file.replace('.md', ''),
