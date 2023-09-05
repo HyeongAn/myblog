@@ -56,7 +56,11 @@ const Header = ({ xWidth }: HeaderProps) => {
           }}
           onClick={() => toggleMenu()}
         >
-          <Image src={miniMenu} alt="menu button" width="18" height="18" />
+          <Image
+            src={miniMenu}
+            alt="menu button"
+            style={{ width: '18px', height: '18px' }}
+          />
         </div>
       )}
       <SlideMenu

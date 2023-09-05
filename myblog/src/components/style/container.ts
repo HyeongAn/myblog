@@ -88,11 +88,17 @@ export const ContentBodyContainer = style.div`
   width: 340px;
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
   
-  @media (max-width: 390px) {
+  @media (max-width: 640px) {
     width: 320px;
     justify-content: center;
     padding: 0 10px 10px 10px;
+    margin: 0;
+
+    & p {
+      margin: 0;
+    }
   }
 `
 
@@ -110,4 +116,13 @@ export const FooterLinkContainer = style.div`
   width: 80px;
   justify-content: space-between;
   align-items: center;
+`
+
+export const FlexibleImageContainer = style.div`
+  width: 80%;
+  height: 80%;
+  position: relative;
+  min-width: 370px;
+  min-height: 200px;
+
 `

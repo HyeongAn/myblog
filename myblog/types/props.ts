@@ -1,22 +1,32 @@
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 
+export type Value = string | Buffer
 export interface LayoutProps {
   children: React.ReactNode
 }
 
 export interface PostProps {
-  params: { slug: PostData['slug'] }
+  params: { slug: string }
 }
 
 export interface PostData {
-  data: {
-    title: string
-    description: string
-    coverImage: string
-    date: string
-  }
-  content: string
+  data: PostDataType
+  // {
+  //   title: string
+  //   description: string
+  //   coverImage: string
+  //   date: string
+  // }
+  content: Value
   slug: string
+}
+
+export interface PostListProps {
+  postData: PostData[]
+}
+
+export interface PostProps {
+  postData: PostData
 }
 
 export interface IconButtonProps {
@@ -24,6 +34,12 @@ export interface IconButtonProps {
   alt: string
   name: string
   href?: string
+}
+
+export interface ProfileIconButtonProps {
+  src: string | StaticImport
+  alt: string
+  href: string
 }
 
 export interface CloseButtonProps {
@@ -37,6 +53,7 @@ export interface SliderProps {
 }
 
 export interface SlideCardProps {
+  slug: string
   data: PostDataType
 }
 
