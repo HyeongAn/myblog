@@ -3,6 +3,7 @@ title: 'React Zustand'
 description: '이전엔 Redux(Tool-kit)을 사용하면서 다른 상태관리를 사용해본적은 없었다. 하지만 이번 프로젝트를 진행하면서 Zustand라는 상태관리 라이브러리를 사용해 봤는데 최소한의 코드로 상태를 변경할 수 있고, 어떻게 변하는지만 직관적으로 알면 좋았던 Zustand에 대한 기본적인 문법과 사용법을 기록해두려한다.'
 coverImage: 'https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png'
 date: '2023-07-17'
+keywords: ['react', 'zustand', '상태관리', '사용법', 'yoonhu']
 ---
 
 ![](https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png)

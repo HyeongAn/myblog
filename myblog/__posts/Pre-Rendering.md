@@ -3,6 +3,19 @@ title: 'NextJs Pre-Rendering'
 description: '이번 강의를 들으면서 사실 부족했던 부분이 없지 않아 있었던것은 사실인것 같다. 이런 저런 이야기를 많이 하다보니 수업 외적인 이야기도 많았고 수업 시간도 길고.. 뜯어보기에 집중이 되어 있어서 NextJs를 사용하면서 부족했던 설명들을 정리해두고자 한다.'
 coverImage: 'https://velog.velcdn.com/images/gwak2837/post/8be6cb7e-1450-41cf-800a-b82e96dd2eef/image.png'
 date: '2023-09-05'
+keywords:
+  [
+    'nextjs',
+    'pre rendering',
+    'csr',
+    'ssr',
+    'ssg',
+    'getstaticprops',
+    'dynamic routes',
+    'getstaticpaths',
+    '블로그 만들기',
+    'yoonhu',
+  ]
 ---
 
 # NextJs Pre-Rendering
@@ -109,11 +122,7 @@ export const getPosts = async () => {
       const post = fs.readFileSync(path.join(filePath, file), 'utf8')
       const { data, content } = matter(post)
       const slug = file.replace('.md', '')
-      const parseContent = unified()
-        .use(markdown)
-        .use(remark2rehype)
-        .use(html)
-        .processSync(content)
+      const parseContent = unified().use(markdown).use(remark2rehype).use(html).processSync(content)
       return {
         slug,
         data,

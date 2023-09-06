@@ -3,6 +3,7 @@ title: 'React Portal'
 description: '프로젝트를 진행하다보면 모달창이 필요할때가 있다. 이 모달창이 어떠한 컴포넌트에서 떠야할지 조절하는건 물론 개발자의 몫이겠지만, 대부분 최상위에 띄워져 사용자의 다음 스텝에 영향을 줄 수 있도록 만드는것이 목적이다.'
 coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
 date: '2023-08-25'
+keywords: ['react', 'portal', 'yoonhu', 'modal', 'component']
 ---
 
 # Portal
@@ -41,10 +42,7 @@ React를 처음 설정할때, `index.html`을 보면 기본적인 `	header`, `bo
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>React App</title>
@@ -81,10 +79,7 @@ type Props = {
 
 // 방법1
 const ModalContainer: React.FC<Props> = ({ children }) => {
-  return ReactDOM.createPortal(
-    <>{children}</>,
-    document.getElementById('portal')!
-  )
+  return ReactDOM.createPortal(<>{children}</>, document.getElementById('portal')!)
 }
 
 // 방법2
