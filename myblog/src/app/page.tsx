@@ -3,10 +3,12 @@ import Main from '../components/home/main'
 
 const Home = () => {
   return (
-    <div className="home">
-      <Main />
-      <SliderWrap />
-    </div>
+    <>
+      <div className="home">
+        <Main />
+        <SliderWrap />
+      </div>
+    </>
   )
 }
 
