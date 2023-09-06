@@ -15,7 +15,7 @@ const DetailPage = ({ content }: DetailPageProps) => {
   }, [])
 
   return (
-    <ContentsContainer>
+    <ContentsContainer style={{ maxWidth: '768px' }}>
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </ContentsContainer>
   )

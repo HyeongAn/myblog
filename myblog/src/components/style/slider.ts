@@ -18,10 +18,16 @@ export const SlideContainer = style.div`
 `
 
 export const CardContainer = style.div`
-width: 320px;
-max-height: 420px;
-background-color: white;
-overflow: hidden;
+  min-width: 320px;
+  max-height: 420px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgb(0 0 0 / 20%);
+  border-radius: 20px;
 `
 
 export const CardSlider = style.div`

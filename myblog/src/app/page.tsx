@@ -1,21 +1,12 @@
-import {
-  ColumnCenterContainer,
-  ColumnContainer,
-} from '@/components/style/container'
+import SliderWrap from '@/components/home/slider/slider-wrap'
 import Main from '../components/home/main'
-import Slider from '@/components/home/slider'
-import { getPosts } from '../../lib/ssg.module'
 
-const Home = async () => {
-  const postData = await getPosts()
-
+const Home = () => {
   return (
-    <ColumnContainer style={{ height: '100%' }}>
+    <div className="home">
       <Main />
-      <ColumnCenterContainer>
-        <Slider postData={postData} />
-      </ColumnCenterContainer>
-    </ColumnContainer>
+      <SliderWrap />
+    </div>
   )
 }
 
