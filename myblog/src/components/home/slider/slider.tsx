@@ -1,12 +1,13 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import SliderCard from './slider-card'
-import { PostDataType, SliderProps } from '../../../types/props'
-import { SliderButton } from '../style/buttons/button'
-import leftArrow from '../../../assets/svg/left-arrow.svg'
-import rightArrow from '../../../assets/svg/right-arrow.svg'
+import { PostDataType, SliderProps } from '../../../../types/props'
+import { SliderButton } from '../../style/buttons/button'
+import leftArrow from '../../../../assets/svg/left-arrow.svg'
+import rightArrow from '../../../../assets/svg/right-arrow.svg'
 import Image from 'next/image'
-import { CardSlider, CarouselSlider, SlideContainer } from '../style/slider'
+import { CardSlider, CarouselSlider, SlideContainer } from '../../style/slider'
+import { ColumnCenterContainer } from '../../style/container'
 
 const Slider = ({ postData }: SliderProps) => {
   const slideRef = useRef<HTMLDivElement>(null)
@@ -19,15 +20,8 @@ const Slider = ({ postData }: SliderProps) => {
     if (postData.length >= 7) {
       const copyPostData = [...postData]
       const startPoint = copyPostData.slice(0, 3)
-      const endPoint = copyPostData.slice(
-        copyPostData.length - 3,
-        copyPostData.length
-      )
-      const carouselList = [
-        ...endPoint,
-        ...copyPostData.slice(0, 7),
-        ...startPoint,
-      ]
+      const endPoint = copyPostData.slice(copyPostData.length - 3, copyPostData.length)
+      const carouselList = [...endPoint, ...copyPostData.slice(0, 7), ...startPoint]
       setCurrentPostData(carouselList)
     } else {
       const copyPostData = [...postData]
@@ -38,10 +32,7 @@ const Slider = ({ postData }: SliderProps) => {
         }
       }
       const startPoint = copyPostData.slice(0, 3)
-      const endPoint = copyPostData.slice(
-        copyPostData.length - 3,
-        copyPostData.length
-      )
+      const endPoint = copyPostData.slice(copyPostData.length - 3, copyPostData.length)
       const carouselList = [...endPoint, ...copyPostData, ...startPoint]
       setCurrentPostData(carouselList)
     }
@@ -60,15 +51,11 @@ const Slider = ({ postData }: SliderProps) => {
         setCurrentIndex(3)
       } else if (currentIndex === 3) {
         slideCurrent.style.transform = `translateX(-${currentIndex * 360}px)`
-        slideCurrent.style.transition = carousel
-          ? 'transform 0s ease-in-out 0s'
-          : 'all 0.5s ease-in-out'
+        slideCurrent.style.transition = carousel ? 'transform 0s ease-in-out 0s' : 'all 0.5s ease-in-out'
         setCarousel(false)
       } else if (currentIndex === 7) {
         slideCurrent.style.transform = `translateX(-${currentIndex * 360}px)`
-        slideCurrent.style.transition = carousel
-          ? 'transform 0s ease-in-out 0s'
-          : 'all 0.5s ease-in-out'
+        slideCurrent.style.transition = carousel ? 'transform 0s ease-in-out 0s' : 'all 0.5s ease-in-out'
         setCarousel(false)
       } else {
         slideCurrent.style.transform = `translateX(-${currentIndex * 360}px)`
@@ -105,31 +92,24 @@ const Slider = ({ postData }: SliderProps) => {
   }
 
   return (
-    <SlideContainer>
-      <SliderButton onClick={() => onPrevClick()}>
-        <Image src={leftArrow} alt="left arrow image" width="25" height="25" />
-      </SliderButton>
-      <CarouselSlider>
-        <CardSlider ref={slideRef}>
-          {currentPostData &&
-            currentPostData.map((item, idx) => (
-              <SliderCard
-                slug={item.slug}
-                data={item.data}
-                key={`slide-card-${idx}`}
-              />
-            ))}
-        </CardSlider>
-      </CarouselSlider>
-      <SliderButton onClick={() => onNextClick()}>
-        <Image
-          src={rightArrow}
-          alt="right arrow image"
-          width="25"
-          height="25"
-        />
-      </SliderButton>
-    </SlideContainer>
+    <ColumnCenterContainer>
+      <SlideContainer>
+        <SliderButton onClick={() => onPrevClick()}>
+          <Image src={leftArrow} alt="left arrow image" width="25" height="25" />
+        </SliderButton>
+        <CarouselSlider>
+          <CardSlider ref={slideRef}>
+            {currentPostData &&
+              currentPostData.map((item, idx) => (
+                <SliderCard slug={item.slug} data={item.data} key={`slide-card-${idx}`} />
+              ))}
+          </CardSlider>
+        </CarouselSlider>
+        <SliderButton onClick={() => onNextClick()}>
+          <Image src={rightArrow} alt="right arrow image" width="25" height="25" />
+        </SliderButton>
+      </SlideContainer>
+    </ColumnCenterContainer>
   )
 }
 

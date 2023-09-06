@@ -17,13 +17,16 @@ const Main = () => {
       <ContentContainer>
         <ContentHeaderContainer>
           <h1>{`👨🏻‍💻 YoonHu's Intro`}</h1>
-          <Image
-            style={{ borderRadius: '12px' }}
-            src={profilePicture}
-            alt="profileImage"
-            width="320"
-            height="320"
-          />
+          <div
+            style={{ position: 'relative', width: '320px', height: '320px' }}
+          >
+            <Image
+              style={{ borderRadius: '12px' }}
+              src={profilePicture}
+              alt="profileImage"
+              layout="fill"
+            />
+          </div>
         </ContentHeaderContainer>
         <ContentBodyContainer>
           <h3>프론트엔드 개발자 권형안입니다.</h3>
