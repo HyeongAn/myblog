@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   keywords: ['nextjs', 'react', 'yoonhu blog', '윤후', '윤후 블로그'],
   creator: 'Yoonhu',
   publisher: 'Vercel',
+  verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
   openGraph: {
     url: 'https://yoonhu.vercel.app',
     siteName: 'yoonhu blog',

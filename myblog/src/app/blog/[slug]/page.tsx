@@ -37,6 +37,7 @@ export const generateMetadata = async ({ params }: PostProps): Promise<Metadata>
     creator: 'yoonhu',
     publisher: 'Vercel',
     keywords: data.keywords,
+    verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
     openGraph: {
       url: `https://yoonhu.vercel.app/blog/${params.slug}`,
       siteName: 'yoonhu blog',
