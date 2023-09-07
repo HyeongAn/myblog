@@ -37,9 +37,7 @@ export interface IconButtonProps {
 }
 
 export interface ProfileIconButtonProps {
-  src: string | StaticImport
-  alt: string
-  href: string
+  profile: IconButtonProps
 }
 
 export interface CloseButtonProps {

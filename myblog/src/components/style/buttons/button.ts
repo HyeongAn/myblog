@@ -50,3 +50,47 @@ export const CloseButton = style.button`
   top: 10px;
   right: 10px;
 `
+
+export const IconLinkContainer = style.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  & [role='tooltip'] {
+    height: 18px;
+    visibility: hidden;
+    position: absolute;
+    background: #F9F9F9;
+    border-radius: 6px;
+    bottom: -20px;
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+    padding: 0 8px;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  &:hover {
+    position: relative;
+    background-color: #E2E8F0;
+    transition: all 0.2s;
+    & [role='tooltip'] {
+      visibility: visible;
+      opacity: 1;
+      
+    }
+  }
+
+`
+
+export const IconLink = style.a`
+  width: 18px;
+  height: 18px;
+`
