@@ -59,6 +59,7 @@ export const IconLinkContainer = style.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
 
   & [role='tooltip'] {
     height: 18px;
@@ -66,7 +67,7 @@ export const IconLinkContainer = style.div`
     position: absolute;
     background: #F9F9F9;
     border-radius: 6px;
-    bottom: -20px;
+    bottom: -25px;
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
     padding: 0 8px;
     color: black;
@@ -75,16 +76,20 @@ export const IconLinkContainer = style.div`
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   &:hover {
-    position: relative;
     background-color: #E2E8F0;
     transition: all 0.2s;
     & [role='tooltip'] {
       visibility: visible;
       opacity: 1;
-      
+      cursor: default;
+      &:hover {
+        visibility: hidden;
+        opacity: 0;
+        
+      }
     }
   }
 

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { ProfileIconButtonProps } from '../../../../types/props'
 import { IconLink, IconLinkContainer } from './button'
+import { ManagedSpot } from '../menu/menu'
 
 const ProfileIconButtons = ({ profile }: ProfileIconButtonProps) => {
   return (
@@ -11,6 +12,7 @@ const ProfileIconButtons = ({ profile }: ProfileIconButtonProps) => {
       <span role="tooltip" id="icon-info">
         {profile.name}
       </span>
+      <ManagedSpot isManaged={profile.isManaged} />
     </IconLinkContainer>
   )
 }
