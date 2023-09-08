@@ -2,6 +2,10 @@
 
 import style from 'styled-components'
 
+interface SlideProps {
+  isManaged?: boolean
+}
+
 export const SlideMenuContainer = style.div`
   width: 300px;
   height: 100%;
@@ -47,4 +51,37 @@ export const SlideMenuUl = style.ul`
     display: flex;
     align-items: center;
   }
+`
+
+export const SlideProfileContainer = style.div`
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: #EBF8FF;
+  box-shadow: 0 0 0 5px #1A356D;
+  border-radius: 50%;
+  overflow: hidden;
+  box-align: end;
+
+  & div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5px;
+    left: -11px;
+    display: block;
+  }
+`
+
+export const ManagedSpot = style.div<SlideProps>`
+  background-color: ${(props) => (props.isManaged ? '#48BB78' : '#A0AEC0')} ;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 `

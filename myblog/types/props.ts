@@ -34,6 +34,7 @@ export interface IconButtonProps {
   alt: string
   name: string
   href?: string
+  isManaged?: boolean
 }
 
 export interface ProfileIconButtonProps {
