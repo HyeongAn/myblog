@@ -2,7 +2,7 @@
 
 import style from 'styled-components'
 
-export const ColumnCenterContainer = style.div`
+export const MainContainer = style.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,6 +14,14 @@ export const ColumnCenterContainer = style.div`
     align-items: center;
   }
 `
+
+export const ColumnCenterContainer = style.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 export const ColumnLeftContainer = style.div`
   display: flex;
   flex-direction: column;
@@ -106,9 +114,10 @@ export const FooterContainer = style.footer`
   display: flex;
   width: 100%;
   min-width: 390px;
-  min-height: 120px;
+  min-height: 100px;
+  font-size: 12px;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
 `
 
 export const FooterLinkContainer = style.div`

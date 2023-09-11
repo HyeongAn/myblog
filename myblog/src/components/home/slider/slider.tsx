@@ -7,7 +7,7 @@ import leftArrow from '../../../../assets/svg/left-arrow.svg'
 import rightArrow from '../../../../assets/svg/right-arrow.svg'
 import Image from 'next/image'
 import { CardSlider, CarouselSlider, SlideContainer } from '../../style/slider'
-import { ColumnCenterContainer } from '../../style/container'
+import { MainContainer } from '../../style/container'
 
 const Slider = ({ postData }: SliderProps) => {
   const slideRef = useRef<HTMLDivElement>(null)
@@ -92,7 +92,7 @@ const Slider = ({ postData }: SliderProps) => {
   }
 
   return (
-    <ColumnCenterContainer>
+    <MainContainer>
       <SlideContainer>
         <SliderButton onClick={() => onPrevClick()}>
           <Image src={leftArrow} alt="left arrow image" width="25" height="25" />
@@ -109,7 +109,7 @@ const Slider = ({ postData }: SliderProps) => {
           <Image src={rightArrow} alt="right arrow image" width="25" height="25" />
         </SliderButton>
       </SlideContainer>
-    </ColumnCenterContainer>
+    </MainContainer>
   )
 }
 

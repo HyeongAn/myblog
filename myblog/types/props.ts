@@ -70,3 +70,8 @@ export interface MenuListProps {
   list: { name: string; href: string }
   clickEvent: () => void
 }
+
+export interface CurrentProps {
+  isManaged: boolean
+  outline: string
+}

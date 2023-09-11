@@ -7,7 +7,7 @@ import ProfileIconButtons from '../style/buttons/profile-icon-button'
 
 const ProfileIcons = () => {
   return (
-    <RowBetweenContainer style={{ width: '130px', marginTop: '10px' }}>
+    <RowBetweenContainer style={{ width: '130px', marginTop: '6px', justifyContent: 'center', gap: '10px' }}>
       {Array.from({
         length: 4,
         0: {

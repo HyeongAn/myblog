@@ -2,7 +2,7 @@
 
 import style from 'styled-components'
 
-interface SlideProps {
+export interface SlideProps {
   isManaged?: boolean
 }
 
@@ -81,7 +81,9 @@ export const ManagedSpot = style.div<SlideProps>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+`
+
+export const ManagedOutLine = style.span<SlideProps>`
+  font-size: 10px;
+  color: ${(props) => (props.isManaged ? '#48BB78' : '#A0AEC0')} ;
 `

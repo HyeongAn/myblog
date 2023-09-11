@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { SlideCardProps } from '../../../../types/props'
-import { ColumnCenterContainer, ColumnLeftContainer } from '../../style/container'
+import { ColumnLeftContainer } from '../../style/container'
 import { CardContainer } from '../../style/slider'
 import { useRouter } from 'next/navigation'
 
