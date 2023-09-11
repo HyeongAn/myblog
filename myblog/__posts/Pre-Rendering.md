@@ -16,6 +16,7 @@ keywords:
     '블로그 만들기',
     'yoonhu',
   ]
+category: 'NextJS'
 ---
 
 # NextJs Pre-Rendering

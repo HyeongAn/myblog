@@ -50,3 +50,21 @@ export const getPostSlug = async () => {
   })
   return files
 }
+
+export const getCategory = async () => {
+  const filePath = path.join(process.cwd(), '__posts')
+  const files = fs.readdirSync(filePath)
+  let category: { [key: string]: number } = {}
+  const categories: string[] = files.map((file) => {
+    const post = fs.readFileSync(path.join(filePath, file), 'utf8')
+    const { data } = matter(post)
+    return data.category
+  })
+
+  categories.forEach((index) => {
+    category[index] = (category[index] || 0) + 1
+  })
+
+  category = { 'ALL POSTS': categories.length, ...category }
+  return category
+}
