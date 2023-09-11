@@ -18,12 +18,12 @@ const SlideMenuProfile = () => {
         <p>권형안</p>
         {Array.from({
           length: 2,
-          0: { isManaged: true, outline: 'Currently Managed' },
-          1: { isManaged: false, outline: 'Currently not Managed' },
+          0: { managed: true, outline: 'Currently Managed' },
+          1: { managed: false, outline: 'Currently not Managed' },
         }).map((content, index) => {
           return (
             <SlideMenuProfileCurrent
-              isManaged={content.isManaged}
+              managed={content.managed}
               outline={content.outline}
               key={`profile-content-index-${index}`}
             />

@@ -1,17 +1,22 @@
+'use client'
 import { MainHeaderContainer, RowCenterContainer } from '@/components/style/container'
 import { getCategory } from '../../../../lib/ssg.module'
 import { CategoryContainer, CategoryKey, CategoryValue, CategoryWrapper } from '@/components/style/category'
 import Link from 'next/link'
 
-const MainHeader = async () => {
-  const categories = await getCategory()
+interface CategoryProps {
+  categories: {
+    [key: string]: number
+  }
+}
 
+const MainHeader = ({ categories }: CategoryProps) => {
   function* outputCategory() {
     for (const [key, value] of Object.entries(categories)) {
       yield (
-        <CategoryWrapper>
-          <CategoryKey isAll={key === 'ALL POSTS'}>{key}</CategoryKey>
-          <CategoryValue isAll={key === 'ALL POSTS'}>{`(${value})`}</CategoryValue>
+        <CategoryWrapper key={`category-${key}-${value}`}>
+          <CategoryKey>{key}</CategoryKey>
+          <CategoryValue>{`(${value})`}</CategoryValue>
         </CategoryWrapper>
       )
     }
