@@ -12,7 +12,7 @@ const ProfileIconButtons = ({ profile }: ProfileIconButtonProps) => {
       <span role="tooltip" id="icon-info">
         {profile.name}
       </span>
-      <ManagedSpot isManaged={profile.isManaged} />
+      <ManagedSpot style={{ position: 'absolute', bottom: '0', right: '0' }} isManaged={profile.isManaged} />
     </IconLinkContainer>
   )
 }
