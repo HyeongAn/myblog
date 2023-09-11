@@ -2,10 +2,6 @@
 
 import style from 'styled-components'
 
-interface KeyProps {
-  isAll?: boolean
-}
-
 export const CategoryContainer = style.nav`
   display: flex;
   flex-wrap: wrap;
@@ -22,17 +18,17 @@ export const CategoryWrapper = style.div`
   cursor: pointer;
 `
 
-export const CategoryKey = style.p<KeyProps>`
+export const CategoryKey = style.p`
   font-size: 18px;
-  font-weight: ${(props) => (props.isAll ? '700' : '400')};
+  font-weight: 400;
   margin: 0;
   color: #202125;
 
 `
 
-export const CategoryValue = style.p<KeyProps>`
+export const CategoryValue = style.p`
   font-size: 12px;
-  font-weight: ${(props) => (props.isAll ? '700' : '400')};
+  font-weight: 400;
   margin: 0;
   color: #202125;
 `

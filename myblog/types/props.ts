@@ -34,7 +34,7 @@ export interface IconButtonProps {
   alt: string
   name: string
   href?: string
-  isManaged?: boolean
+  managed?: boolean
 }
 
 export interface ProfileIconButtonProps {
@@ -72,6 +72,6 @@ export interface MenuListProps {
 }
 
 export interface CurrentProps {
-  isManaged: boolean
+  managed: boolean
   outline: string
 }

@@ -2,11 +2,11 @@ import { CurrentProps } from '../../../types/props'
 import { RowCenterContainer } from '../style/container'
 import { ManagedOutLine, ManagedSpot } from '../style/menu/menu'
 
-const SlideMenuProfileCurrent = ({ isManaged, outline }: CurrentProps) => {
+const SlideMenuProfileCurrent = ({ managed, outline }: CurrentProps) => {
   return (
     <RowCenterContainer style={{ gap: '6px' }}>
-      <ManagedSpot isManaged={isManaged} />
-      <ManagedOutLine isManaged={isManaged}>{outline}</ManagedOutLine>
+      <ManagedSpot $managed={managed} />
+      <ManagedOutLine $managed={managed}>{outline}</ManagedOutLine>
     </RowCenterContainer>
   )
 }

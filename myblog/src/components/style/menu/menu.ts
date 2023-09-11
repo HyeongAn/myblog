@@ -3,7 +3,7 @@
 import style from 'styled-components'
 
 export interface SlideProps {
-  isManaged?: boolean
+  $managed?: boolean
 }
 
 export const SlideMenuContainer = style.div`
@@ -77,7 +77,7 @@ export const SlideProfileContainer = style.div`
 `
 
 export const ManagedSpot = style.div<SlideProps>`
-  background-color: ${(props) => (props.isManaged ? '#48BB78' : '#A0AEC0')} ;
+  background-color: ${(props) => (props.$managed ? '#48BB78' : '#A0AEC0')} ;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -85,5 +85,5 @@ export const ManagedSpot = style.div<SlideProps>`
 
 export const ManagedOutLine = style.span<SlideProps>`
   font-size: 10px;
-  color: ${(props) => (props.isManaged ? '#48BB78' : '#A0AEC0')} ;
+  color: ${(props) => (props.$managed ? '#48BB78' : '#A0AEC0')} ;
 `
