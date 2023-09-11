@@ -4,6 +4,7 @@ description: '이전엔 Redux(Tool-kit)을 사용하면서 다른 상태관리�
 coverImage: 'https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png'
 date: '2023-07-17'
 keywords: ['react', 'zustand', '상태관리', '사용법', 'yoonhu']
+category: 'React'
 ---
 
 ![](https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png)

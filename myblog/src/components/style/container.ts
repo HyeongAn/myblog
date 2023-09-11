@@ -2,19 +2,6 @@
 
 import style from 'styled-components'
 
-export const MainContainer = style.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 370px;
-
-  @media (max-width: 390px) {
-    min-width: 370px;
-    align-items: center;
-  }
-`
-
 export const ColumnCenterContainer = style.div`
   display: flex;
   flex-direction: column;
@@ -80,34 +67,31 @@ max-width: 700px;
 }
 `
 
-export const ContentHeaderContainer = style.div`
-display: flex;
-min-width: 350px;
-flex-direction: column;
-justify-content: center;
-
-@media (max-width: 390px) {
-  align-items: center;
+export const MainContainer = style.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-}
+  align-items: center;
+  margin-top: 40px;
 `
 
-export const ContentBodyContainer = style.div`
+export const MainHeaderContainer = style.div`
+  display: flex;
+  min-width: 350px;
+  flex-direction: column;
+  justify-content: center;
+
+  & h2 {
+    font-size: 60px;
+  }
+`
+
+export const MainBodyContainer = style.div`
   width: 340px;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   
-  @media (max-width: 640px) {
-    width: 320px;
-    justify-content: center;
-    padding: 0 10px 10px 10px;
-    margin: 0;
-
-    & p {
-      margin: 0;
-    }
-  }
 `
 
 export const FooterContainer = style.footer`

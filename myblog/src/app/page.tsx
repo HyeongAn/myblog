@@ -1,5 +1,5 @@
 import SliderWrap from '@/components/home/slider/slider-wrap'
-import Main from '../components/home/main'
+import Main from '../components/home/main/main'
 import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
 
 const Home = () => {
