@@ -73,6 +73,7 @@ export const MainContainer = style.div`
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  max-width: 900px;
 `
 
 export const MainHeaderContainer = style.div`
@@ -87,10 +88,14 @@ export const MainHeaderContainer = style.div`
 `
 
 export const MainBodyContainer = style.div`
-  width: 340px;
   display: flex;
-  flex-direction: column;
-  margin-left: 20px;
+  flex-direction: row;
+  gap: 60px;
+  width: 100%;
+
+  @media (max-width:640px) {
+    width: 640px;
+  }
   
 `
 

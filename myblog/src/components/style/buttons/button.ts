@@ -2,6 +2,10 @@
 
 import style from 'styled-components'
 
+interface ControllerProps {
+  $isClick?: boolean
+}
+
 export const IconButton = style.a`
   height: 60px;
   color: black;
@@ -98,4 +102,14 @@ export const IconLinkContainer = style.div`
 export const IconLink = style.a`
   width: 18px;
   height: 18px;
+`
+
+export const ControllerButton = style.button<ControllerProps>`
+width: 8px;
+height: 8px;
+border-radius: 50%;
+border: 1px solid;
+cursor: pointer;
+background: transparent;
+padding: 0;
 `

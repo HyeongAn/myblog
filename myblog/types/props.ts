@@ -76,3 +76,28 @@ export interface CurrentProps {
   managed: boolean
   outline: string
 }
+
+export interface CarouselProps extends MainPostDataProps {
+  currentIndex: number
+  setCurrentIndex: (state: number) => void
+}
+
+export interface ControllerProps {
+  onNextClick: () => void
+  onPrevClick: () => void
+  currentIndex: number
+}
+
+export interface MainPostDataProps {
+  postData: PostData[]
+}
+
+export interface CarouselCardInfoProps {
+  postData: PostData
+}
+
+export interface CarouselCardProps extends CarouselCardInfoProps {
+  index: number
+  currentIndex: number
+  setCurrentIndex: (state: number) => void
+}
