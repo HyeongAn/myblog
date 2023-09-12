@@ -1,16 +1,21 @@
 import Main from '@/components/home/main/main'
 import { getCategoryId } from '../../../lib/ssg.module'
+import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
+import SliderWrap from '@/components/home/slider/slider-wrap'
 
 interface CategoryProps {
   params: { category: string }
 }
 
 const Category = ({ params }: CategoryProps) => {
-  const { category } = params
   return (
-    <>
+    <div className="home">
       <Main />
-    </>
+      <SliderWrap />
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+        <SlideMenuProfile />
+      </div>
+    </div>
   )
 }
 

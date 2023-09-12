@@ -2,6 +2,7 @@
 import { MainHeaderContainer, RowCenterContainer } from '@/components/style/container'
 import { CategoryContainer, CategoryKey, CategoryValue, CategoryWrapper } from '@/components/style/category'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface CategoryProps {
   categories: {
@@ -10,14 +11,29 @@ interface CategoryProps {
 }
 
 const MainHeader = ({ categories }: CategoryProps) => {
+  const pathName = usePathname()
+
   function* outputCategory() {
     for (const [key, value] of Object.entries(categories)) {
-      yield (
-        <CategoryWrapper key={`category-${key}-${value}`}>
-          <CategoryKey>{key}</CategoryKey>
-          <CategoryValue>{`(${value})`}</CategoryValue>
-        </CategoryWrapper>
-      )
+      if (key === 'ALL POSTS') {
+        yield (
+          <Link href={'/'} key={`category-${key}-${value}`}>
+            <CategoryWrapper>
+              <CategoryKey $isClicked={pathName === `/`}>{key}</CategoryKey>
+              <CategoryValue $isClicked={pathName === `/`}>{`(${value})`}</CategoryValue>
+            </CategoryWrapper>
+          </Link>
+        )
+      } else {
+        yield (
+          <Link href={`/${key}`} key={`category-${key}-${value}`}>
+            <CategoryWrapper>
+              <CategoryKey $isClicked={pathName === `/${key}`}>{key}</CategoryKey>
+              <CategoryValue $isClicked={pathName === `/${key}`}>{`(${value})`}</CategoryValue>
+            </CategoryWrapper>
+          </Link>
+        )
+      }
     }
   }
 
