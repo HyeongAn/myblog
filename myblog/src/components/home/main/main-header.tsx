@@ -1,6 +1,5 @@
 'use client'
 import { MainHeaderContainer, RowCenterContainer } from '@/components/style/container'
-import { getCategory } from '../../../../lib/ssg.module'
 import { CategoryContainer, CategoryKey, CategoryValue, CategoryWrapper } from '@/components/style/category'
 import Link from 'next/link'
 

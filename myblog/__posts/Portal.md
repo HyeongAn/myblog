@@ -4,7 +4,7 @@ description: '프로젝트를 진행하다보면 모달창이 필요할때가 �
 coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
 date: '2023-08-25'
 keywords: ['react', 'portal', 'yoonhu', 'modal', 'component']
-category: 'React'
+category: 'react'
 ---
 
 # Portal

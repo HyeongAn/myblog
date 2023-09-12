@@ -16,27 +16,17 @@ const SlideMenuContents = ({ toggleMenu }: MenuContentsProps) => {
     <>
       <SlideMenuHeader>
         <span style={{ fontWeight: '700', fontSize: '20px' }}>Menu</span>
-        <CloseButtons
-          src={closeIcon}
-          alt={'close-button'}
-          clickEvent={toggleMenu}
-        />
+        <CloseButtons src={closeIcon} alt={'close-button'} clickEvent={toggleMenu} />
       </SlideMenuHeader>
       <SlideMenuBody>
         <SlideMenuProfile />
         <SlideMenuUl>
           {Array.from({
-            length: 2,
+            length: 1,
             0: { name: 'Home', href: '/' },
             1: { name: 'Blog', href: '/blog' },
           }).map((menu, index) => {
-            return (
-              <MenuList
-                clickEvent={toggleMenu}
-                list={menu}
-                key={`menu-list-index-${index}`}
-              />
-            )
+            return <MenuList clickEvent={toggleMenu} list={menu} key={`menu-list-index-${index}`} />
           })}
         </SlideMenuUl>
       </SlideMenuBody>

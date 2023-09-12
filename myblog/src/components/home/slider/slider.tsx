@@ -101,7 +101,7 @@ const Slider = ({ postData }: SliderProps) => {
           <CardSlider ref={slideRef}>
             {currentPostData &&
               currentPostData.map((item, idx) => (
-                <SliderCard slug={item.slug} data={item.data} key={`slide-card-${idx}`} />
+                <SliderCard category={item.data.category} slug={item.slug} data={item.data} key={`slide-card-${idx}`} />
               ))}
           </CardSlider>
         </CarouselSlider>

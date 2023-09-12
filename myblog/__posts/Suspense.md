@@ -4,7 +4,7 @@ description: '현재의 프로젝트에서 자사 라이브러리를 사용하�
 coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
 date: '2023-08-26'
 keywords: ['react', 'suspense', 'waterfall', '경쟁상태', 'fallback', '고찰', 'yoonhu']
-category: 'React'
+category: 'react'
 ---
 
 # Suspense
