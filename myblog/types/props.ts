@@ -54,6 +54,7 @@ export interface SliderProps {
 export interface SlideCardProps {
   slug: string
   data: PostDataType
+  category: string
 }
 
 export type PostDataType = Record<string, any>

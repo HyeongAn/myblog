@@ -39,9 +39,6 @@ const Header = ({ xWidth }: HeaderProps) => {
           <Link href="/" style={{ color: 'black', marginRight: '8px' }}>
             Home
           </Link>
-          <Link href="/blog" style={{ color: 'black' }}>
-            Blog
-          </Link>
         </div>
       ) : (
         <div
@@ -56,19 +53,10 @@ const Header = ({ xWidth }: HeaderProps) => {
           }}
           onClick={() => toggleMenu()}
         >
-          <Image
-            src={miniMenu}
-            alt="menu button"
-            style={{ width: '18px', height: '18px' }}
-          />
+          <Image src={miniMenu} alt="menu button" style={{ width: '18px', height: '18px' }} />
         </div>
       )}
-      <SlideMenu
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        xPosition={xPosition}
-        setXPosition={setXPosition}
-      >
+      <SlideMenu isOpen={isOpen} setIsOpen={setIsOpen} xPosition={xPosition} setXPosition={setXPosition}>
         <SlideMenuContents toggleMenu={toggleMenu} />
       </SlideMenu>
     </HeadContainer>

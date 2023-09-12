@@ -5,13 +5,13 @@ import { ColumnLeftContainer } from '../../style/container'
 import { CardContainer } from '../../style/slider'
 import { useRouter } from 'next/navigation'
 
-const SliderCard = ({ data, slug }: SlideCardProps) => {
+const SliderCard = ({ data, slug, category }: SlideCardProps) => {
   const router = useRouter()
 
   return (
     <CardContainer
       onClick={() => {
-        router.push(`/blog/${slug}`)
+        router.push(`/${category}/${slug}`)
       }}
     >
       <div

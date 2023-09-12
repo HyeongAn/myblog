@@ -1,10 +1,10 @@
 import { PostContainer, TitleContainer } from '@/components/style/post'
-import { getPostData, getPostSlug } from '../../../../lib/ssg.module'
+import { getCategoryId, getCategoryPost, getPostData, getPostSlug } from '../../../../lib/ssg.module'
 import DetailPage from './detail-page'
 import { Metadata } from 'next'
 
 interface PostProps {
-  params: { slug: string }
+  params: { category: string; slug: string }
 }
 
 const Post = async ({ params }: PostProps) => {
@@ -21,10 +21,17 @@ const Post = async ({ params }: PostProps) => {
 }
 
 export const generateStaticParams = async () => {
-  const paths = await getPostSlug()
-  return paths.map((path) => {
-    slug: path.params.slug.toString()
-  })
+  const categories = await getCategoryId()
+  const params: { category: string; slug: string }[] = []
+
+  for (const category of categories) {
+    const posts = await getCategoryPost(category.params.category)
+    for (const post of posts) {
+      params.push({ category: category.params.category.toString(), slug: post.toString() })
+    }
+  }
+
+  return params
 }
 
 export const generateMetadata = async ({ params }: PostProps): Promise<Metadata> => {
@@ -39,7 +46,7 @@ export const generateMetadata = async ({ params }: PostProps): Promise<Metadata>
     keywords: data.keywords,
     verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
     openGraph: {
-      url: `https://yoonhu.vercel.app/blog/${params.slug}`,
+      url: `https://yoonhu.vercel.app/blog/${params.category}/${params.slug}`,
       siteName: 'yoonhu blog',
       title: data.title,
       description: data.description,

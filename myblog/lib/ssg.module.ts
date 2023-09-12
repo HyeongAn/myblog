@@ -68,3 +68,38 @@ export const getCategory = async () => {
   category = { 'ALL POSTS': categories.length, ...category }
   return category
 }
+
+export const getCategoryId = async () => {
+  const filePath = path.join(process.cwd(), '__posts')
+  const files = fs.readdirSync(filePath)
+  const categories: string[] = []
+
+  for (const file of files) {
+    const post = fs.readFileSync(path.join(filePath, file), 'utf8')
+    const { data } = matter(post)
+    if (!categories.includes(data.category)) categories.push(data.category)
+  }
+
+  const categoryId = categories.map((category) => {
+    return {
+      params: {
+        category,
+      },
+    }
+  })
+
+  return categoryId
+}
+
+export const getCategoryPost = async (category: string) => {
+  const filePath = path.join(process.cwd(), '__posts')
+  const files = fs.readdirSync(filePath)
+
+  const posts = files.filter((file) => {
+    const post = fs.readFileSync(path.join(filePath, file), 'utf8')
+    const { data } = matter(post)
+    return data.category === category
+  })
+
+  return posts
+}
