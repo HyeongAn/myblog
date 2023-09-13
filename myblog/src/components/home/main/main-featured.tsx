@@ -4,10 +4,12 @@ import { MainFeatureBody, MainFeatureHead } from '@/components/style/main'
 import MainFeaturedController from './main-featured-controller'
 import Carousel from '../carousel/carousel'
 import { MainPostDataProps } from '../../../../types/props'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const MainFeatured = ({ postData }: MainPostDataProps) => {
   const [currentIndex, setCurrentIndex] = useState(1)
+  const intervalRef = useRef<NodeJS.Timeout>()
+  const [isPaused, setIsPaused] = useState(false)
 
   const onPrevClick = () => {
     if (currentIndex <= 0) setCurrentIndex(4)
@@ -20,19 +22,26 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
   }
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      onNextClick()
-    }, 5000)
-    return () => {
-      clearInterval(timer)
+    if (isPaused) {
+      clearInterval(intervalRef.current)
+    } else {
+      intervalRef.current = setInterval(onPrevClick, 10000)
     }
-  }, [currentIndex])
+
+    return () => clearInterval(intervalRef.current)
+  }, [onPrevClick, isPaused])
 
   return (
     <ColumnContainer>
       <MainFeatureHead style={{ marginTop: '40px' }}>
         <h2 style={{ fontSize: '36px', margin: '0' }}>Featured.</h2>
-        <MainFeaturedController onPrevClick={onPrevClick} onNextClick={onNextClick} currentIndex={currentIndex} />
+        <MainFeaturedController
+          onPrevClick={onPrevClick}
+          onNextClick={onNextClick}
+          currentIndex={currentIndex}
+          isPaused={isPaused}
+          setIsPaused={setIsPaused}
+        />
       </MainFeatureHead>
       <MainFeatureBody>
         <Carousel postData={postData} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />

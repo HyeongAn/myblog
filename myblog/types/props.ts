@@ -86,6 +86,8 @@ export interface ControllerProps {
   onNextClick: () => void
   onPrevClick: () => void
   currentIndex: number
+  isPaused: boolean
+  setIsPaused: (state: boolean) => void
 }
 
 export interface MainPostDataProps {
@@ -97,7 +99,6 @@ export interface CarouselCardInfoProps {
 }
 
 export interface CarouselCardProps extends CarouselCardInfoProps {
-  index: number
   currentIndex: number
   setCurrentIndex: (state: number) => void
 }
