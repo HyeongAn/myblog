@@ -4,18 +4,29 @@ import { MainFeatureBody, MainFeatureHead } from '@/components/style/main'
 import MainFeaturedController from './main-featured-controller'
 import Carousel from '../carousel/carousel'
 import { MainPostDataProps } from '../../../../types/props'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const MainFeatured = ({ postData }: MainPostDataProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(1)
 
   const onPrevClick = () => {
-    setCurrentIndex((prev) => prev - 1)
+    if (currentIndex <= 0) setCurrentIndex(4)
+    else setCurrentIndex((prev) => prev - 1)
   }
 
   const onNextClick = () => {
+    if (currentIndex > 5) setCurrentIndex(1)
     setCurrentIndex((prev) => prev + 1)
   }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      onNextClick()
+    }, 5000)
+    return () => {
+      clearInterval(timer)
+    }
+  }, [currentIndex])
 
   return (
     <ColumnContainer>

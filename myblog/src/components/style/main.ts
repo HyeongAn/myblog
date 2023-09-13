@@ -47,6 +47,7 @@ export const CarouselCardContainer = style.div`
   display: flex;
   position: absolute;
   top: 0;
+  opacity: 0;
   
   & [role='tooltip'] {
     visibility: hidden;
@@ -56,6 +57,8 @@ export const CarouselCardContainer = style.div`
     top: 0;
     opacity: 0;
     transition: 0.3s;
+    border-radius: 20px;
+    background-color: rgba(32, 33, 37, 30%);
   }
 
   &: hover {
@@ -65,19 +68,6 @@ export const CarouselCardContainer = style.div`
     }
   }
 
-`
-
-export const CarouselArticle = style.article`
-  width: 660px;
-  height: 460px;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  z-index: 1000;
-
-  &: hover {
-    visibility: visible;
-  }
 `
 
 export const CarouselDescription = style.span`
@@ -95,4 +85,20 @@ export const CarouselCategory = style.span`
   border-radius: 20px;
   border: 1px solid white;
   padding: 5px 10px;
+`
+
+export const CarouselCardInfoContainer = style.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+`
+
+export const CarouselRoundDiv = style.span`
+  border-radius: 20px;
+  border: 1.5px solid #202125;
+  padding: 5px 10px;
+  color: #202125;
+  font-size: 14px;
+  font-weight: 800;
 `
