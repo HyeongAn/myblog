@@ -91,7 +91,8 @@ export const MainBodyContainer = style.div`
   display: flex;
   flex-direction: row;
   gap: 60px;
-  width: 100%;
+  width: 900px;
+  height: 670px;
 
   @media (max-width:640px) {
     width: 640px;

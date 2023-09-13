@@ -11,9 +11,8 @@ export const MainFeatureHead = style.div`
 `
 
 export const MainFeatureBody = style.div`
-  width: 900px;
+  width: 660px;
   display: flex;
-  gap: 60px;
 `
 
 export const MainFeatureController = style.div`
@@ -102,13 +101,34 @@ export const CarouselRoundDiv = style.span`
   font-weight: 800;
 `
 export const IndexContainer = style.div`
-  width: 175px;
-  overflow: scroll;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
 `
 
-export const IndexHeader = style.div`
-
+export const IndexHeader = style.h2`
+  font-size:36px;
+  margin: 0;
 `
 
 export const IndexBody = style.div`
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+
+  & ul {
+    gap: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin:20px 0 0 0;
+
+    & li {
+      & p {
+        margin: 0;
+        color: 'black';
+      }
+    }
+  }
 `
