@@ -98,8 +98,9 @@ export const getCategoryPost = async (category: string) => {
   const posts = files.filter((file) => {
     const post = fs.readFileSync(path.join(filePath, file), 'utf8')
     const { data } = matter(post)
-    return data.category === category
+    if (data.category === category) {
+      return file.replace('.md', '')
+    }
   })
-
   return posts
 }

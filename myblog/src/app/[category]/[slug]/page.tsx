@@ -27,10 +27,9 @@ export const generateStaticParams = async () => {
   for (const category of categories) {
     const posts = await getCategoryPost(category.params.category)
     for (const post of posts) {
-      params.push({ category: category.params.category.toString(), slug: post.toString() })
+      params.push({ category: category.params.category.toString(), slug: post.replace('.md', '').toString() })
     }
   }
-
   return params
 }
 
