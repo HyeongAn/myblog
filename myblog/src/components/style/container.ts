@@ -41,7 +41,7 @@ export const RowBetweenContainer = style.div`
   align-items: center;
 `
 
-export const HeadContainer = style.head`
+export const HeadContainer = style.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

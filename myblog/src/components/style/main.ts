@@ -1,15 +1,19 @@
 'use client'
 
-import style, { keyframes } from 'styled-components'
+import style from 'styled-components'
 
 export const MainFeatureHead = style.div`
+  width: 660px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 `
 
 export const MainFeatureBody = style.div`
-
+  width: 900px;
+  display: flex;
+  gap: 60px;
 `
 
 export const MainFeatureController = style.div`
@@ -96,4 +100,15 @@ export const CarouselRoundDiv = style.span`
   color: #202125;
   font-size: 14px;
   font-weight: 800;
+`
+export const IndexContainer = style.div`
+  width: 175px;
+  overflow: scroll;
+`
+
+export const IndexHeader = style.div`
+
+`
+
+export const IndexBody = style.div`
 `

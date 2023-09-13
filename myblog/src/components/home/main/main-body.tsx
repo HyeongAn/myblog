@@ -1,8 +1,8 @@
 'use client'
 import { MainBodyContainer } from '@/components/style/container'
 import MainFeatured from './main-featured'
-import MainShorts from './main-shorts'
 import { MainPostDataProps } from '../../../../types/props'
+import MainShorts from './main-shorts'
 
 const MainBody = ({ postData }: MainPostDataProps) => {
   return (
