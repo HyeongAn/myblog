@@ -27,9 +27,9 @@ const SliderCard = ({ data, slug, category }: SlideCardProps) => {
           style={{
             borderTopLeftRadius: '20px',
             borderTopRightRadius: '20px',
+            objectFit: 'cover',
           }}
           layout="fill"
-          objectFit="cover"
           alt="cover Image"
           src={data.coverImage}
         />

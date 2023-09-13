@@ -1,6 +1,6 @@
 'use client'
 
-import style from 'styled-components'
+import style, { keyframes } from 'styled-components'
 
 export const MainFeatureHead = style.div`
   display: flex;
@@ -26,6 +26,8 @@ export const MainFeatureController = style.div`
 `
 
 export const CarouselContainer = style.div`
+  width: 660px;
+  height: 660px;  
   display: flex;
   flex-direction: column;
   position: relative;
@@ -35,19 +37,12 @@ export const CarouselContainer = style.div`
   }
 `
 
-export const CarouselWrapper = style.div`
-  width: 660px;
-  height: 660px;
-  position: relative;
-`
-
 export const CarouselCardContainer = style.div`
   width: 100%;
   height: 100%;
   display: flex;
   position: absolute;
   top: 0;
-  opacity: 0;
   
   & [role='tooltip'] {
     visibility: hidden;
