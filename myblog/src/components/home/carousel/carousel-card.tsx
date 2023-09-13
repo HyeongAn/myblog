@@ -4,10 +4,23 @@ import { CarouselCardProps, PostData } from '../../../../types/props'
 import Image from 'next/image'
 import { CarouselCardContainer, CarouselCategory, CarouselDescription } from '@/components/style/main'
 import CarouselCardInfo from './carousel-card-info'
+import { useEffect, useRef } from 'react'
 
 const CarouselCard = ({ postData, index, currentIndex, setCurrentIndex }: CarouselCardProps) => {
+  const carouselRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const carouselCurrent = carouselRef.current
+    if (carouselCurrent) {
+      carouselCurrent.style.opacity = '1'
+      carouselCurrent.style.transition = `opacity 2s 1s`
+      carouselCurrent.style.transform = `translateX(5%)`
+    }
+  }, [currentIndex])
+
   return (
     <CarouselCardContainer
+      ref={carouselRef}
       style={index === currentIndex ? { display: 'block' } : { display: 'none' }}
       aria-describedby="carousel-article-info"
     >

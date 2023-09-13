@@ -1,18 +1,20 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CarouselProps, PostData } from '../../../../types/props'
 import { CarouselContainer, CarouselWrapper } from '@/components/style/main'
 import CarouselCard from './carousel-card'
 
 const Carousel = ({ postData, currentIndex, setCurrentIndex }: CarouselProps) => {
-  const carouselRef = useRef<HTMLDivElement>(null)
   const [currentPostData, setCurrentPostData] = useState<PostData[]>()
 
   useEffect(() => {
     if (postData.length >= 5) {
       const copyPostData = [...postData].slice(0, 5)
-      setCurrentPostData(copyPostData)
+      const firstPostData = copyPostData.slice(0, 1)
+      const lastPostData = copyPostData.slice(copyPostData.length - 1, copyPostData.length)
+      const postList = [...lastPostData, ...copyPostData, ...firstPostData]
+      setCurrentPostData(postList)
     } else {
       const copyPostData = [...postData]
       while (copyPostData.length < 5) {
@@ -21,7 +23,10 @@ const Carousel = ({ postData, currentIndex, setCurrentIndex }: CarouselProps) =>
           else break
         }
       }
-      setCurrentPostData(copyPostData)
+      const firstPostData = copyPostData.slice(0, 1)
+      const lastPostData = copyPostData.slice(copyPostData.length - 1, copyPostData.length)
+      const postList = [...lastPostData, ...copyPostData, ...firstPostData]
+      setCurrentPostData(postList)
     }
   }, [postData])
 

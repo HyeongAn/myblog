@@ -12,9 +12,9 @@ const MainFeaturedController = ({ onNextClick, onPrevClick, currentIndex }: Cont
   return (
     <MainFeatureController>
       <div>
-        <Image src={leftArrow} alt="left arrow" />
+        <Image src={leftArrow} alt="left arrow" style={{ cursor: 'pointer' }} onClick={() => onPrevClick()} />
         <Image src={stopIcon} alt="stop icon" />
-        <Image src={rightArrow} alt="right arrow" />
+        <Image src={rightArrow} alt="right arrow" style={{ cursor: 'pointer' }} onClick={() => onNextClick()} />
       </div>
       <div style={{ gap: '6px' }}>
         <ControllerButton />
