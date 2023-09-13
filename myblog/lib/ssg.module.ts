@@ -26,7 +26,7 @@ export const getPosts = async () => {
   return posts
 }
 
-export const getPostData = cache(async (slug: string) => {
+export const getPostData = async (slug: string) => {
   const filePath = path.join(process.cwd(), '__posts', `${slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
@@ -37,7 +37,7 @@ export const getPostData = cache(async (slug: string) => {
     data,
     content: parseContent.value,
   }
-})
+}
 
 export const getPostSlug = async () => {
   const filePath = path.join(process.cwd(), '__posts')
