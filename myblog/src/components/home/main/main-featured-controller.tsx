@@ -26,11 +26,9 @@ const MainFeaturedController = ({ onNextClick, onPrevClick, currentIndex, setIsP
         <Image src={rightArrow} alt="right arrow" style={{ cursor: 'pointer' }} onClick={() => onNextClick()} />
       </div>
       <div style={{ gap: '6px' }}>
-        <ControllerButton />
-        <ControllerButton />
-        <ControllerButton />
-        <ControllerButton />
-        <ControllerButton />
+        {Array.from({ length: 5 }).map((_, index) => {
+          return <ControllerButton $isClick={index === currentIndex} key={`controller-button-${index}`} />
+        })}
       </div>
     </MainFeatureController>
   )

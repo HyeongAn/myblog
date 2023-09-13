@@ -105,11 +105,12 @@ export const IconLink = style.a`
 `
 
 export const ControllerButton = style.button<ControllerProps>`
-width: 8px;
-height: 8px;
-border-radius: 50%;
-border: 1px solid;
-cursor: pointer;
-background: transparent;
-padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid;
+  cursor: pointer;
+  background: ${(props) => (props.$isClick ? 'black' : 'transparent')};
+  padding: 0;
+  
 `

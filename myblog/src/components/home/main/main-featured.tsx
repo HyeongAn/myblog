@@ -12,24 +12,22 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
   const [isPaused, setIsPaused] = useState(false)
 
   const onPrevClick = () => {
-    if (currentIndex <= 0) setCurrentIndex(4)
-    else setCurrentIndex((prev) => prev - 1)
+    setCurrentIndex((prev) => (prev - 1 + 5) % 5)
   }
 
   const onNextClick = () => {
-    if (currentIndex > 5) setCurrentIndex(1)
-    setCurrentIndex((prev) => prev + 1)
+    setCurrentIndex((prev) => (prev + 1) % 5)
   }
 
   useEffect(() => {
     if (isPaused) {
       clearInterval(intervalRef.current)
     } else {
-      intervalRef.current = setInterval(onPrevClick, 10000)
+      intervalRef.current = setInterval(onNextClick, 10000)
     }
 
     return () => clearInterval(intervalRef.current)
-  }, [onPrevClick, isPaused])
+  }, [onNextClick, isPaused])
 
   return (
     <ColumnContainer>
