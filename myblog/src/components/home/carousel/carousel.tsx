@@ -12,9 +12,6 @@ const Carousel = ({ postData, currentIndex, setCurrentIndex }: CarouselProps) =>
   useEffect(() => {
     if (postData.length >= 5) {
       const copyPostData = [...postData].slice(0, 5)
-      // const firstPostData = copyPostData.slice(0, 1)
-      // const lastPostData = copyPostData.slice(copyPostData.length - 1, copyPostData.length)
-      // const postList = [...lastPostData, ...copyPostData, ...firstPostData]
       setCurrentPostData(copyPostData)
     } else {
       const copyPostData = [...postData]
@@ -24,9 +21,6 @@ const Carousel = ({ postData, currentIndex, setCurrentIndex }: CarouselProps) =>
           else break
         }
       }
-      // const firstPostData = copyPostData.slice(0, 1)
-      // const lastPostData = copyPostData.slice(copyPostData.length - 1, copyPostData.length)
-      // const postList = [...lastPostData, ...copyPostData, ...firstPostData]
       setCurrentPostData(copyPostData)
     }
   }, [postData])

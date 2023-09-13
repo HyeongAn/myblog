@@ -8,8 +8,8 @@ import { useEffect, useRef, useState } from 'react'
 
 const MainFeatured = ({ postData }: MainPostDataProps) => {
   const [currentIndex, setCurrentIndex] = useState(1)
-  const intervalRef = useRef<NodeJS.Timeout>()
   const [isPaused, setIsPaused] = useState(false)
+  const intervalRef = useRef<NodeJS.Timeout>()
 
   const onPrevClick = () => {
     setCurrentIndex((prev) => (prev - 1 + 5) % 5)

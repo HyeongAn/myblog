@@ -41,17 +41,17 @@ export const RowBetweenContainer = style.div`
   align-items: center;
 `
 
-export const HeadContainer = style.div`
+export const HeadContainer = style.head`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
   min-width: 390px;
-  min-height: 55px;
-  position: relative;
+  min-height: 70px;
+  position: sticky;
   top: 0;
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
-  
+  padding: 0 20px;
+  background-color: white;
+  z-index: 5;
 `
 
 export const ContentContainer = style.div`
