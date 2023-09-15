@@ -7,11 +7,12 @@ body {
   margin: 0;
   background: white;
   color: black;
-  width: 100vw;
+  width: 100%;
   min-width: 390px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
   /* background: #303030;
   color: white; */
 }
@@ -39,12 +40,4 @@ a {
 img {
   width: 100%;
   height: 100%;
-}
-
-.home {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

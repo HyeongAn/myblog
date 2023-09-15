@@ -1,4 +1,4 @@
-import { FooterContainer, FooterLinkContainer } from '../style/container'
+import { FooterContainer } from '../style/container'
 
 const Footer = () => {
   return <FooterContainer>© 2023. kwonhyeongan all rights reserved.</FooterContainer>

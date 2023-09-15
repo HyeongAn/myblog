@@ -25,7 +25,7 @@ export interface PostListProps {
   postData: PostData[]
 }
 
-export interface PostProps {
+export interface PostDataProps {
   postData: PostData
 }
 

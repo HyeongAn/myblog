@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { CarouselCardProps } from '../../../../types/props'
 import Image from 'next/image'
-import { CarouselCardContainer, CarouselCategory, CarouselDescription } from '@/components/style/main'
+import { CarouselCardContainer, CarouselCategory, CarouselOutline } from '@/components/style/main'
 import CarouselCardInfo from './carousel-card-info'
 
 const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardProps) => {
@@ -12,7 +12,6 @@ const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardP
         <article
           style={{
             width: '660px',
-            height: '660px',
             display: 'flex',
             flexDirection: 'column',
           }}
@@ -28,7 +27,7 @@ const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardP
           <CarouselCardInfo postData={postData} />
           <div role="tooltip">
             <CarouselCategory>{postData.data.category}</CarouselCategory>
-            <CarouselDescription>{postData.data.description}</CarouselDescription>
+            <CarouselOutline>{postData.data.outline}</CarouselOutline>
           </div>
         </article>
       </Link>

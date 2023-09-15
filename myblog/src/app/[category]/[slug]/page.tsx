@@ -1,7 +1,7 @@
-import { PostContainer, TitleContainer } from '@/components/style/post'
 import { getCategoryId, getCategoryPost, getPostData, getPostSlug } from '../../../../lib/ssg.module'
 import DetailPage from './detail-page'
 import { Metadata } from 'next'
+import { PostContainer, TitleContainer } from '@/components/style/container'
 
 interface PostProps {
   params: { category: string; slug: string }

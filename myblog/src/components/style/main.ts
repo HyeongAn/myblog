@@ -30,7 +30,7 @@ export const MainFeatureController = style.div`
 
 export const CarouselContainer = style.div`
   width: 660px;
-  height: 660px;  
+  height: 600px;  
   display: flex;
   flex-direction: column;
   position: relative;
@@ -68,11 +68,13 @@ export const CarouselCardContainer = style.div`
 
 `
 
-export const CarouselDescription = style.span`
+export const CarouselOutline = style.span`
   color: white;
   position: absolute;
   bottom: 10px;
   left: 10px;
+  font-size: 16px;
+  padding: 5px 20px 5px 10px;
 `
 
 export const CarouselCategory = style.span`
@@ -83,6 +85,7 @@ export const CarouselCategory = style.span`
   border-radius: 20px;
   border: 1px solid white;
   padding: 5px 10px;
+  font-size: 14px;
 `
 
 export const CarouselCardInfoContainer = style.div`

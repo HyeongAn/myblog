@@ -2,9 +2,10 @@
 title: 'React useRef에 대한 고찰'
 description: '사실 Ref에 관한 포스팅을 여러번 했었다. 부모컴포넌트에서 자식컴포넌트 호출하기 위한 forwordRef, onBlur, onFocus를 사용하면서 Ref를 직접 사용가기도 하고 focus설정이라던지, contentEditable을 사용할때도 사용했다. 사실 React를 사용하다보면 엘리먼트를 직접 선택해서 사용하는 경우가 많았다.'
 coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
-date: '2023-08-24'
+date: '2023/08/24'
 keywords: ['react', 'useRef', 'MutableRefObject', 'RefObject', '고찰', 'yoonhu']
 category: 'react'
+outline: 'React useRef에 대해 자세히 알아보려고 쓴글이다.'
 ---
 
 사실 `Ref`에 관한 포스팅을 여러번 했었다. 부모컴포넌트에서 자식컴포넌트 호출하기 위한 `forwordRef`, `onBlur`, `onFocus`를 사용하면서 `Ref`를 직접 사용가기도 하고 `focus`설정이라던지, `contentEditable`을 사용할때도 사용했다. 사실 React를 사용하다보면 엘리먼트를 직접 선택해서 사용하는 경우가 많았다.

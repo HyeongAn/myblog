@@ -1,9 +1,9 @@
 'use client'
-import { ContentsContainer } from '@/components/style/post'
 import { Value } from '../../../../types/props'
 import { useEffect } from 'react'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github-dark.css'
+import { ContentsContainer } from '@/components/style/container'
 
 interface DetailPageProps {
   content: Value

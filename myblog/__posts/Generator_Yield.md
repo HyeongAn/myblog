@@ -2,9 +2,10 @@
 title: 'Javascript Generator와 Yield'
 description: '프로젝트에서 vs코드와 비슷한 탭분할의 기능을 만들기 위해 사용했던 Generator와 Yield이다. JavaScript뿐만 아니라, 다른 언어에서 지원했던 기능을 ES6부터 사용가능하게 되었다고한다.'
 coverImage: 'https://velog.velcdn.com/images/hanblueblue/post/3a0b0464-a4f4-44b9-820a-d14e47f98eec/js.png'
-date: '2023-08-22'
+date: '2023/08/22'
 keywords: ['react', 'generator', 'yield', 'yoonhu', 'js', 'javascript', 'div']
 category: 'javascript'
+outline: '프로젝트를 진행하며 재귀컴포넌트를 만들었을 떄 사용했던 ES6에 추가된 Generator와 Yield에대해 자세히 알아보자.'
 ---
 
 프로젝트에서 vs코드와 비슷한 탭분할의 기능을 만들기 위해 사용했던 `Generator`와 `Yield`이다. JavaScript뿐만 아니라, 다른 언어에서 지원했던 기능을 ES6부터 사용가능하게 되었다고한다.
