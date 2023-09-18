@@ -196,6 +196,7 @@ export const PostContainer = style.div`
 
 export const TitleContainer = style.div`
   width: 100%;
+  max-width: 900px;
   min-width: 380px;
   min-height: 100px;
   display: flex;
