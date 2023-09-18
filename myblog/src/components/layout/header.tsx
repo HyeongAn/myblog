@@ -33,10 +33,18 @@ const Header = ({ xWidth }: HeaderProps) => {
 
   return (
     <HeadContainer>
-      <Link href="/" style={{ color: 'black', marginRight: '8px' }}>
-        <h1 style={{ margin: '0', fontStyle: 'italic', fontSize: '24px', fontWeight: '700', padding: '0 20px' }}>
-          An.
-        </h1>
+      <Link
+        href="/"
+        style={{
+          color: 'black',
+          margin: '0',
+          fontStyle: 'italic',
+          fontSize: '24px',
+          fontWeight: '700',
+          padding: '0 20px',
+        }}
+      >
+        An.
       </Link>
       {/* {width >= 640 ? ( */}
       <Link

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   creator: 'Yoonhu',
   publisher: 'Vercel',
   verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     url: 'https://yoonhu.vercel.app',
     siteName: 'yoonhu blog',
