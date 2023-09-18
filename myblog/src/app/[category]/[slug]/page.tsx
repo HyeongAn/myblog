@@ -1,7 +1,8 @@
 import { getCategoryId, getCategoryPost, getPostData, getPostSlug } from '../../../../lib/ssg.module'
 import DetailPage from './detail-page'
 import { Metadata } from 'next'
-import { PostContainer, TitleContainer } from '@/components/style/container'
+import { PostContainer, RowLeftContainer, TitleContainer } from '@/components/style/container'
+import { CarouselRoundDiv } from '@/components/style/main'
 
 interface PostProps {
   params: { category: string; slug: string }
@@ -12,8 +13,11 @@ const Post = async ({ params }: PostProps) => {
   return (
     <PostContainer style={{ margin: '0' }}>
       <TitleContainer>
-        <h1>{data.title}</h1>
-        <span>{data.date}</span>
+        <h1 style={{ marginBottom: '15px' }}>{data.title}</h1>
+        <RowLeftContainer style={{ gap: '10px' }}>
+          <CarouselRoundDiv>{data.category}</CarouselRoundDiv>
+          <span style={{ color: '#202125', marginTop: 'auto' }}>{data.date}</span>
+        </RowLeftContainer>
       </TitleContainer>
       <DetailPage content={content} />
     </PostContainer>

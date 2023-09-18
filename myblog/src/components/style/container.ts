@@ -141,14 +141,13 @@ export const PostGridContainer = style.section`
   row-gap: 20px;
 
   @media (max-width:640px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 100%;
   }
 `
 
 export const PostCardContainer = style.article`
   width: 100%;
   height: 100%;
-  max-width: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,12 +197,11 @@ export const PostContainer = style.div`
 
 export const TitleContainer = style.div`
   width: 100%;
-  height: 100px;
+  min-width: 380px;
+  min-height: 100px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin: 0;
-  border-bottom: 1px solid rgb(102 102 102 / 20%);
 `
 
 export const ContentsContainer = style.div`

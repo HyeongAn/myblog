@@ -49,7 +49,7 @@ export const CarouselCardContainer = style.div`
   & [role='tooltip'] {
     visibility: hidden;
     width: 100%;
-    height: 460px;
+    height: 480px;
     position: absolute;
     top: 0;
     opacity: 0;
