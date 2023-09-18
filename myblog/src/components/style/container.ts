@@ -59,6 +59,7 @@ export const HeadContainer = style.div`
 
 // ? HomPage에 있는 Main Slide Containers
 export const MainContainer = style.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,13 +82,16 @@ export const MainHeaderContainer = style.div`
 `
 
 export const MainBodyContainer = style.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 60px;
-  width: 900px;
+  max-width: 900px;
 
   @media (max-width:640px) {
-    width: 640px;
+    width: 95%;
+    flex-direction: column;
+    gap: 20px;
   }
   
 `
@@ -121,6 +125,11 @@ export const PostsListContainer = style.div`
   margin: 120px 0;
   max-width: 900px;
   position: relative;
+
+  @media (max-width:640px) {
+    width: 90%;
+  }
+
 `
 
 export const PostCardContainer = style.article`
@@ -164,7 +173,7 @@ export const PostCardTitle = style.h2`
 
 // ? 블로그 Post 컨텐츠에 관계된 container
 export const PostContainer = style.div`
-  width: 90%;
+  width: 95%;
   height: 100%;
   display: flex;
   flex-direction: column;

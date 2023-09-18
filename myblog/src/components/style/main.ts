@@ -3,7 +3,7 @@
 import style from 'styled-components'
 
 export const MainFeatureHead = style.div`
-  width: 660px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +11,7 @@ export const MainFeatureHead = style.div`
 `
 
 export const MainFeatureBody = style.div`
-  width: 660px;
+  width: 100%;
   display: flex;
 `
 
@@ -29,14 +29,13 @@ export const MainFeatureController = style.div`
 `
 
 export const CarouselContainer = style.div`
-  width: 660px;
+  width: 100%;
   height: 600px;  
   display: flex;
   flex-direction: column;
-  position: relative;
 
   @media (max-width: 640px) {
-    width: 390px;
+    height: 500px;
   }
 `
 
@@ -49,7 +48,7 @@ export const CarouselCardContainer = style.div`
   
   & [role='tooltip'] {
     visibility: hidden;
-    width: 660px;
+    width: 100%;
     height: 460px;
     position: absolute;
     top: 0;
@@ -57,6 +56,10 @@ export const CarouselCardContainer = style.div`
     transition: 0.3s;
     border-radius: 20px;
     background-color: rgba(32, 33, 37, 30%);
+
+    @media (max-width: 640px) {
+      height: 380px;
+    }
   }
 
   &: hover {
@@ -103,6 +106,18 @@ export const CarouselRoundDiv = style.span`
   font-size: 14px;
   font-weight: 800;
 `
+
+export const CarouselImageDiv = style.div`
+  display: flex;
+  width: 100%;
+  height: 480px;
+  position: relative;
+
+  @media (max-width: 640px) {
+    height: 380px;
+  }
+`
+
 export const IndexContainer = style.div`
   width: 180px;
   display: flex;

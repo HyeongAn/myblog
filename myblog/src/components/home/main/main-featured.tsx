@@ -30,7 +30,7 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
   }, [onNextClick, isPaused])
 
   return (
-    <ColumnContainer style={{ width: '660px' }}>
+    <ColumnContainer style={{ maxWidth: '660px' }}>
       <MainFeatureHead>
         <h2 style={{ fontSize: '36px', margin: '0', fontStyle: 'italic' }}>Featured.</h2>
         <MainFeaturedController

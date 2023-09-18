@@ -32,8 +32,8 @@ const Carousel = ({ postData, currentIndex, setCurrentIndex }: CarouselProps) =>
           currentPostData.map((data, index) => {
             return index === currentIndex ? (
               <motion.div
-                style={{ position: 'absolute', top: 0, left: 0 }}
-                key={`postdata-card-${index}`}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}
+                key={`postData-card-${index}`}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0 }}
