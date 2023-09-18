@@ -44,14 +44,13 @@ export const RowBetweenContainer = style.div`
 
 // ? header에 관계된 Containers
 export const HeadContainer = style.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 390px;
   min-height: 70px;
   position: sticky;
   top: 0;
-  padding: 0 20px;
   background-color: white;
   z-index: 5;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -119,7 +118,6 @@ export const FlexibleImageContainer = style.div`
 // ? MainPage PostList에 관계된 Containers
 export const PostsListContainer = style.div`
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   margin: 120px 0;
@@ -127,14 +125,30 @@ export const PostsListContainer = style.div`
   position: relative;
 
   @media (max-width:640px) {
-    width: 90%;
+    width: 95%;
+    justify-content: center;
   }
 
 `
 
+export const PostGridContainer = style.section`
+  display: grid;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  row-gap: 20px;
+
+  @media (max-width:640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+
 export const PostCardContainer = style.article`
-  width: 440px;
-  height: 460px;
+  width: 100%;
+  height: 100%;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,11 +158,13 @@ export const PostCardContainer = style.article`
 
   & [role='tooltip'] {
     visibility: hidden;
-    width: 440px;
-    height: 340px;
+    width: 100%;
+    height: 100%;
+    max-width: 440px;
+    max-height: 340px;
     position: absolute;
     top: 0;
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s;
     border-radius: 20px;
     background-color: rgba(32, 33, 37, 30%);

@@ -8,7 +8,7 @@ import SlideMenuProfileCurrent from './slider-menu-profile-current'
 
 const SlideMenuProfile = () => {
   return (
-    <>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
       <SlideProfileContainer>
         <div>
           <Image src={nukiProfilePicture} alt="profile image" fill style={{ objectFit: 'contain' }} />
@@ -31,7 +31,7 @@ const SlideMenuProfile = () => {
         })}
       </ColumnCenterContainer>
       <ProfileIcons />
-    </>
+    </div>
   )
 }
 

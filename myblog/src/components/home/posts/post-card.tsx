@@ -10,7 +10,7 @@ const PostCard = ({ postData }: PostDataProps) => {
   return (
     <PostCardContainer aria-describedby="carousel-article-info" style={{ position: 'relative' }}>
       <Link href={`/${postData.data.category}/${postData.slug}`} style={{ width: '100%', height: '100%' }}>
-        <div style={{ width: '440px', height: '340px', position: 'relative' }}>
+        <div style={{ width: '100%', height: '340px', position: 'relative' }}>
           <Image
             src={postData.data.coverImage}
             alt={`post-${postData.data.category}-${postData.slug}`}

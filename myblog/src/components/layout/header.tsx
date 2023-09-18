@@ -34,15 +34,19 @@ const Header = ({ xWidth }: HeaderProps) => {
   return (
     <HeadContainer>
       <Link href="/" style={{ color: 'black', marginRight: '8px' }}>
-        <h1 style={{ margin: '0', fontStyle: 'italic', fontSize: '24px', fontWeight: '700' }}>An.</h1>
+        <h1 style={{ margin: '0', fontStyle: 'italic', fontSize: '24px', fontWeight: '700', padding: '0 20px' }}>
+          An.
+        </h1>
       </Link>
-      {width >= 640 ? (
-        <div style={{ position: 'absolute', right: '10px' }}>
-          <Link href="/" style={{ color: 'black', marginRight: '8px' }}>
-            Home
-          </Link>
-        </div>
-      ) : (
+      {/* {width >= 640 ? ( */}
+      <Link
+        href="https://www.notion.so/87d3f1d26daf49368f9dfe7119f2cb84?pvs=4"
+        target="_blank"
+        style={{ color: 'black', marginRight: '8px', fontStyle: 'italic', fontWeight: '700', padding: '0 20px' }}
+      >
+        About
+      </Link>
+      {/* ) : (
         <div
           style={{
             display: 'flex',
@@ -57,10 +61,11 @@ const Header = ({ xWidth }: HeaderProps) => {
         >
           <Image src={miniMenu} alt="menu button" style={{ width: '18px', height: '18px' }} />
         </div>
-      )}
+      )} 
       <SlideMenu isOpen={isOpen} setIsOpen={setIsOpen} xPosition={xPosition} setXPosition={setXPosition}>
         <SlideMenuContents toggleMenu={toggleMenu} />
       </SlideMenu>
+      */}
     </HeadContainer>
   )
 }

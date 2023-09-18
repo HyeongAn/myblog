@@ -16,9 +16,7 @@ const Home = () => {
     >
       <Main />
       <PostList />
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-        <SlideMenuProfile />
-      </div>
+      <SlideMenuProfile />
     </div>
   )
 }

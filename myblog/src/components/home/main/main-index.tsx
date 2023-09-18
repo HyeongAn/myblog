@@ -7,7 +7,7 @@ import Link from 'next/link'
 const MainIndex = ({ postData }: MainPostDataProps) => {
   return (
     <IndexContainer>
-      <IndexHeader>Index.</IndexHeader>
+      <IndexHeader>Lately.</IndexHeader>
       <IndexBody>
         <ul>
           {postData.map((data, index) => {
