@@ -37,6 +37,7 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
           onPrevClick={onPrevClick}
           onNextClick={onNextClick}
           currentIndex={currentIndex}
+          setCurrentIndex={setCurrentIndex}
           isPaused={isPaused}
           setIsPaused={setIsPaused}
         />

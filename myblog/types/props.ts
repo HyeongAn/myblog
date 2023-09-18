@@ -86,6 +86,7 @@ export interface ControllerProps {
   onNextClick: () => void
   onPrevClick: () => void
   currentIndex: number
+  setCurrentIndex: (state: number) => void
   isPaused: boolean
   setIsPaused: (state: boolean) => void
 }

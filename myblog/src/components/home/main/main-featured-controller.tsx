@@ -8,7 +8,14 @@ import playIcon from '../../../../assets/svg/play-icon.svg'
 import { ControllerButton } from '@/components/style/buttons/button'
 import { ControllerProps } from '../../../../types/props'
 
-const MainFeaturedController = ({ onNextClick, onPrevClick, currentIndex, setIsPaused, isPaused }: ControllerProps) => {
+const MainFeaturedController = ({
+  onNextClick,
+  onPrevClick,
+  currentIndex,
+  setCurrentIndex,
+  setIsPaused,
+  isPaused,
+}: ControllerProps) => {
   return (
     <MainFeatureController>
       <div>
@@ -27,7 +34,13 @@ const MainFeaturedController = ({ onNextClick, onPrevClick, currentIndex, setIsP
       </div>
       <div style={{ gap: '6px' }}>
         {Array.from({ length: 5 }).map((_, index) => {
-          return <ControllerButton $isClick={index === currentIndex} key={`controller-button-${index}`} />
+          return (
+            <ControllerButton
+              $isClick={index === currentIndex}
+              key={`controller-button-${index}`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          )
         })}
       </div>
     </MainFeatureController>
