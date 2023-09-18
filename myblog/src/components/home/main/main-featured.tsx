@@ -32,7 +32,7 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
   return (
     <ColumnContainer style={{ width: '660px' }}>
       <MainFeatureHead>
-        <h2 style={{ fontSize: '36px', margin: '0' }}>Featured.</h2>
+        <h2 style={{ fontSize: '36px', margin: '0', fontStyle: 'italic' }}>Featured.</h2>
         <MainFeaturedController
           onPrevClick={onPrevClick}
           onNextClick={onNextClick}

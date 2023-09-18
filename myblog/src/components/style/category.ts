@@ -11,8 +11,7 @@ export const CategoryContainer = style.nav`
   flex-wrap: wrap;
   column-gap: 10px;
   row-gap: 10px;
-  width: 100%;
-  min-width: 640px;
+  max-width: 640px;
 `
 
 export const CategoryWrapper = style.div`

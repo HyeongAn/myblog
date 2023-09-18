@@ -65,7 +65,7 @@ export const getCategory = async () => {
     category[index] = (category[index] || 0) + 1
   })
 
-  category = { 'ALL POSTS': categories.length, ...category }
+  category = { 'All Posts': categories.length, ...category }
   return category
 }
 

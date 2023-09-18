@@ -15,7 +15,7 @@ const MainHeader = ({ categories }: CategoryProps) => {
 
   function* outputCategory() {
     for (const [key, value] of Object.entries(categories)) {
-      if (key === 'ALL POSTS') {
+      if (key === 'All Posts') {
         yield (
           <Link href={'/'} key={`category-${key}-${value}`}>
             <CategoryWrapper>

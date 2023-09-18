@@ -93,7 +93,7 @@ export default Home
 
 ---
 title: "first bloging"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 coverImage: "../assets/img/react.png"
 date: "2023-07-17"
 ---
@@ -258,7 +258,7 @@ export const getServerProps = async (context) => {
 
 ---
 title: "first bloging"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 coverImage: "../assets/img/react.png"
 date: "2023-07-17"
 ---

@@ -68,13 +68,15 @@ export const MainContainer = style.div`
 `
 
 export const MainHeaderContainer = style.div`
+  width: 100%;
   display: flex;
-  min-width: 350px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   & h2 {
     font-size: 60px;
+    font-style: italic;
   }
 `
 

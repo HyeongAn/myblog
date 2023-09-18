@@ -113,6 +113,7 @@ export const IndexContainer = style.div`
 export const IndexHeader = style.h2`
   font-size:36px;
   margin: 0;
+  font-style: italic;
 `
 
 export const IndexBody = style.div`
@@ -129,6 +130,7 @@ export const IndexBody = style.div`
 
     & li {
       & p {
+        line-height: 1.3;
         margin: 0;
         color: 'black';
       }
