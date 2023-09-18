@@ -46,7 +46,7 @@ const MainSkeleton = () => {
       <MainContainer>
         <MainHeaderContainer>
           <RowCenterContainer>
-            <h2>ALL POSTS.</h2>
+            <h2 style={{ fontKerning: 'normal' }}>ALL POSTS.</h2>
           </RowCenterContainer>
           <div style={{ gap: '10px', display: 'flex', flexDirection: 'column' }}>
             <CategorySkeletonContainer />

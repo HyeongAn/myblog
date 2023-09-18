@@ -57,3 +57,12 @@ img {
 li {
   line-height: 2;
 }
+
+code {
+  color: #eb5757;
+  border-radius: 3px;
+  background: rgba(135, 131, 120, 0.15);
+  line-height: normal;
+  padding: 0.2em 0.4em;
+  font-size: 14px;
+}
