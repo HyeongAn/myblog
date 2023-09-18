@@ -159,7 +159,6 @@ export const PostCardContainer = style.article`
     visibility: hidden;
     width: 100%;
     height: 100%;
-    max-width: 440px;
     max-height: 340px;
     position: absolute;
     top: 0;
