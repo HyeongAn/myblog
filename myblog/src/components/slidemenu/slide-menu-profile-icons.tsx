@@ -3,6 +3,7 @@ import notionIcon from '../../../assets/Notion-logo.svg'
 import gitIcon from '../../../assets/Git-logo.svg'
 import velogIcon from '../../../assets/velog-logo.svg'
 import emailIcon from '../../../assets/email-logo.svg'
+import rocketpunch from '../../../assets/rocketpunch-logo.svg'
 import { RowBetweenContainer } from '../style/container'
 import ProfileIconButtons from '../style/buttons/profile-icon-button'
 
@@ -26,10 +27,10 @@ const ProfileIcons = () => {
           managed: true,
         },
         2: {
-          href: 'https://www.notion.so/87d3f1d26daf49368f9dfe7119f2cb84?pvs=4',
-          src: notionIcon,
-          alt: 'notion icon',
-          name: 'Notion',
+          href: 'https://www.rocketpunch.com/@guddks84',
+          src: rocketpunch,
+          alt: 'rocket punch icon',
+          name: 'RocketPunch',
           managed: true,
         },
         3: {
@@ -37,7 +38,7 @@ const ProfileIcons = () => {
           src: velogIcon,
           alt: 'velog icon',
           name: 'Velog',
-          managed: true,
+          managed: false,
         },
       }).map((menu, index) => {
         return <ProfileIconButtons key={`menu-list-index-${index}`} profile={menu} />

@@ -1,4 +1,4 @@
-import { getCategoryId, getCategoryPost, getPostData } from '../../../../lib/ssg.module'
+import { getCategoryId, getCategoryPost, getPostData, getPosts } from '../../../../lib/ssg.module'
 import DetailPage from './detail-page'
 import { Metadata } from 'next'
 import { PostContainer, RowLeftContainer, TitleContainer } from '@/components/style/container'
@@ -10,6 +10,10 @@ interface PostProps {
 
 const Post = async ({ params }: PostProps) => {
   const { data, content } = await getPostData(params.slug)
+  const postData = (await getPosts()).filter(
+    (post) => post.data.category === params.category && post.slug !== params.slug
+  )
+
   return (
     <PostContainer style={{ margin: '0' }}>
       <TitleContainer>
@@ -19,7 +23,7 @@ const Post = async ({ params }: PostProps) => {
           <span style={{ color: '#202125', marginTop: 'auto' }}>{data.date}</span>
         </RowLeftContainer>
       </TitleContainer>
-      <DetailPage content={content} />
+      <DetailPage content={content} postData={postData} />
     </PostContainer>
   )
 }

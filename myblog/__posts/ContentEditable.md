@@ -8,6 +8,8 @@ category: 'react'
 outline: '엘리먼트의 내용을 수정할때 사용하는 ContentEditable을 알아보자.'
 ---
 
+![](https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png)
+
 이전엔 `<input>`태그를 활용하여 입력할 text를 받았었는데, 이번 프로젝트를 진행하면서 `<div>`에서도 contentEditable이라는 속성으로 text입력을 받을 수 있다는걸 알았다. 이에 대한 방법과 코드를 기록해두려고 한다.
 
 ## contentEditable

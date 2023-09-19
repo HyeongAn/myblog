@@ -8,6 +8,8 @@ category: 'react'
 outline: 'React Portal로 페이지의 가장위에 띄워지는 모달을 만들어보자.'
 ---
 
+![](https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png)
+
 # Portal
 
 ---

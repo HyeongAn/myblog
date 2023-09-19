@@ -20,6 +20,8 @@ category: 'nextjs'
 outline: 'NextJS v13으로 개인 Blog를 만들기위한 기초 여정에 관한 기록을 적어둔다.'
 ---
 
+![](https://velog.velcdn.com/images/gwak2837/post/8be6cb7e-1450-41cf-800a-b82e96dd2eef/image.png)
+
 # NextJs Pre-Rendering
 
 이번 강의를 들으면서 사실 부족했던 부분이 없지 않아 있었던것은 사실인것 같다. 이런 저런 이야기를 많이 하다보니 수업 외적인 이야기도 많았고 수업 시간도 길고.. 뜯어보기에 집중이 되어 있어서 NextJs를 사용하면서 부족했던 설명들을 정리해두고자 한다.

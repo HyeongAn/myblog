@@ -44,7 +44,7 @@ export const CategorySkeletonInfo = style.div`
 
 export const CategorySkeletonContents = style.div`
   width: 100%;
-  height: 1200px;
+  height: 100%;
   border-radius: 10px;
   background-color: #F5F5F5;
 `

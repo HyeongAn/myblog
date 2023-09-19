@@ -56,7 +56,7 @@ export const CloseButton = style.button`
 `
 
 export const IconLinkContainer = style.div`
-  width: 25px;
+  width: 100%;
   height: 25px;
   border-radius: 50%;
   display: flex;
