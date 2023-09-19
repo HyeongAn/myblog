@@ -370,7 +370,7 @@ export default Test
 
 위에서 보았듯 `index.d.ts`에서 `useRef`의 정의가 오버로딩되어 있는 것을 볼 수 있었다. 가끔 언제 어떤 `useRef`가 쓰이는지 몰라서 코드를 짤때 에러가 생하게 되는데 오버로딩 되는 `useRef`를 하나씩 뜯어보자.
 
-### 1. useRef< T >(initalValue: T): MutableRefObject< T >
+### 1. useRef<T>(initalValue: T): MutableRefObject<T>
 
 인자의 타입과 `generic`의 타입이 `T`로 일치하는 경우 `MutableRefObject<T>`를 반환한다. 즉, `MutableRefObject<T>`의 경우 `current`프로퍼티 그 자체를 직접 변경할 수 있다.
 
@@ -405,7 +405,7 @@ export default Test
 
 `.current`프로퍼티를 수정할 수 없는 것을 볼 수 있다. 이는 `useRef` 두 번째 케이스이므로 `readonly`인 `RefObject`를 반환했기 때문이다.
 
-### 2. useRef< T >(initialValue: T|null): RefObject< T >
+### 2. useRef<T>(initialValue: T|null): RefObject<T>
 
 인자의 타입이 `null`을 허용하는 경우 `RefObject<T>`를 반환한다. `RefObject<T>`는 위의 예제에서 보았듯이 `.current`프로퍼티를 직접 수정할 수 없다.
 
@@ -493,8 +493,12 @@ const inputRef = useRef<HTMLInputElement>(null)
 
 DOM을 직접 조작하기 위한 `ref` 프로퍼티로 `useRef`객체를 사용할 경우, `RefObject<T>`를 사용해야 하므로 초깃값으로 `null`을 선언하여 사용하면 되겠다.
 
-참고
+### Reference
+
 [공식문서](https://ko.legacy.reactjs.org/docs/hooks-reference.html#useref)
+
 [개발자 아저씨들 힘을 모아](https://programming119.tistory.com/265)
+
 [driip.me](https://driip.me/7126d5d5-1937-44a8-98ed-f9065a7c35b5)
+
 [itchallenger](https://itchallenger.tistory.com/673)

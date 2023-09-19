@@ -1,5 +1,6 @@
 'use client'
 import ReactMarkdown from 'react-markdown'
+import slug from 'rehype-slug'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // ?  다크모드 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -14,6 +15,7 @@ interface MarkdownViewProps {
 const MarkdownView = ({ post }: MarkdownViewProps) => {
   return (
     <ReactMarkdown
+      rehypePlugins={[slug]}
       components={{
         code({ inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '')

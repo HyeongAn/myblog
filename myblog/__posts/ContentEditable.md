@@ -96,9 +96,12 @@ React는 virtual DOM을 구현하는데, 상태를 이용해 나중에 그릴 �
 
 두 방법모두 아직 초짜 개발자인 나에게 어렵기만한 내용이다...ㅠㅠ
 
-### 참조
+### Reference
 
 [공식문서](https://ko.reactjs.org/docs/dom-elements.html)
+
 [오늘의 집](https://www.bucketplace.com/post/2020-09-18-%EC%9B%90%ED%99%9C%ED%95%9C-%EC%BD%98%ED%85%90%EC%B8%A0-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%97%90%EB%94%94%ED%84%B0-%EA%B0%9C%EB%B0%9C%EA%B8%B0/)
+
 [경험의 기록](https://blog.dalgu.app/dev/2)
+
 [곤이씨](https://yung-developer.tistory.com/109)

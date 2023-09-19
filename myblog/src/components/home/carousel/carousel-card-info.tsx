@@ -9,7 +9,9 @@ const CarouselCardInfo = ({ postData }: CarouselCardInfoProps) => {
         <CarouselRoundDiv>{postData.data.category}</CarouselRoundDiv>
         <span style={{ color: '#202125', marginTop: 'auto' }}>{postData.data.date}</span>
       </RowLeftContainer>
-      <h2 style={{ color: '#202125', fontSize: '24px', marginTop: '10px' }}>{postData.data.title}</h2>
+      <span style={{ color: '#202125', fontSize: '24px', marginTop: '10px', fontWeight: 'bold' }}>
+        {postData.data.title}
+      </span>
     </CarouselCardInfoContainer>
   )
 }

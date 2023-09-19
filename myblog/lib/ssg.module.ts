@@ -6,6 +6,9 @@ import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'
 import { cache } from 'react'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeSlug from 'rehype-slug'
 
 export const getPosts = async () => {
   const filePath = path.join(process.cwd(), '__posts')
@@ -30,13 +33,11 @@ export const getPostData = async (slug: string) => {
   const filePath = path.join(process.cwd(), '__posts', `${slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
-  //const parseContent = unified().use(markdown).use(remark2rehype).use(html).processSync(content)
 
   return {
     slug,
     data,
     content,
-    // parseContent.value,
   }
 }
 

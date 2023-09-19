@@ -15,7 +15,7 @@ const Post = async ({ params }: PostProps) => {
   )
 
   return (
-    <PostContainer style={{ margin: '0' }}>
+    <PostContainer style={{ margin: '0', position: 'relative' }}>
       <TitleContainer>
         <h1 style={{ marginBottom: '15px' }}>{data.title}</h1>
         <RowLeftContainer style={{ gap: '10px' }}>

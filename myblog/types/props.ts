@@ -59,6 +59,8 @@ export interface SlideCardProps {
 
 export type PostDataType = Record<string, any>
 
+export type ObservedContentType = Record<string, string>
+
 export interface SideMenuProp {
   isOpen: boolean
   setIsOpen: (state: boolean) => void

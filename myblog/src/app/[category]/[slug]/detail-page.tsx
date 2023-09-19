@@ -6,6 +6,8 @@ import MarkdownView from '@/components/markdown/markdown-view'
 import { AnimatePresence, motion } from 'framer-motion'
 import SuggestPage from './suggest-page'
 import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
+import { TOCAside } from '@/components/style/toc'
+import TOC from '@/components/toc/toc'
 
 interface DetailPageProps {
   content: string
@@ -26,7 +28,12 @@ const DetailPage = ({ content, postData }: DetailPageProps) => {
           damping: 20,
         }}
       >
-        <ContentsContainer style={{ maxWidth: '768px' }}>
+        <ContentsContainer style={{ maxWidth: '768px', position: 'relative' }}>
+          <div style={{ position: 'absolute', left: '100%' }}>
+            <TOCAside>
+              <TOC />
+            </TOCAside>
+          </div>
           <MarkdownView post={content} />
         </ContentsContainer>
         <SuggestPage postData={postData} />

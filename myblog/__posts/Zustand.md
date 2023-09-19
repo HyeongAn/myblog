@@ -189,7 +189,8 @@ const Test: React.FC<TestProps> = ({ description }) => {
 
 개인적으로 `Redux`보다 좀 더 쓰기 편하고 보일러 플레이트도 적어 사용하기 너무 편했던 상태관리 라이브러리다.
 
-#### 참고
+### Reference
 
 [공식문서](https://plainenglish.io/blog/using-zustand-and-typescript-to-make-a-to-do-list-in-react)
+
 [TOAST UI](https://ui.toast.com/weekly-pick/ko_20210812)

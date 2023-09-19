@@ -365,10 +365,14 @@ console.log([...calling2])
 // ["H", "E", "L", "L", "O"]
 ```
 
-### 참조
+### Reference
 
 [mdn-generator](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+
 [mdn-yield](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield)
+
 [JAVASCRIPT INFO-generator](https://ko.javascript.info/generators)
+
 [JAVASCRIPT INFO-Iterable](https://ko.javascript.info/iterable)
+
 [JAEWONISM](https://wonism.github.io/javascript-generator/)

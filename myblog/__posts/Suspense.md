@@ -532,5 +532,7 @@ fallback으로 넘겨준 컴포넌트만 나타나는 이유는 위의 `console.
 ## Reference
 
 [DaleSeo](https://www.daleseo.com/react-suspense/)
+
 [dante.log](https://velog.io/@jay/Suspense#%EC%BD%94%EB%93%9C-%EC%8A%A4%ED%94%8C%EB%A6%AC%ED%8C%85-v166)
+
 [kasterra](https://kasterra.github.io/data-fetching-and-react-suspense/)
