@@ -1,6 +1,6 @@
 'use client'
 import { ColumnContainer } from '@/components/style/container'
-import { MainFeatureBody, MainFeatureHead } from '@/components/style/main'
+import { MainFeatureBody, MainFeatureContainer, MainFeatureHead } from '@/components/style/main'
 import MainFeaturedController from './main-featured-controller'
 import Carousel from '../carousel/carousel'
 import { MainPostDataProps } from '../../../../types/props'
@@ -30,7 +30,7 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
   }, [onNextClick, isPaused])
 
   return (
-    <ColumnContainer style={{ maxWidth: '660px' }}>
+    <MainFeatureContainer>
       <MainFeatureHead>
         <h2 style={{ fontSize: '36px', margin: '0', fontStyle: 'italic' }}>Featured.</h2>
         <MainFeaturedController
@@ -45,7 +45,7 @@ const MainFeatured = ({ postData }: MainPostDataProps) => {
       <MainFeatureBody>
         <Carousel postData={postData} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
       </MainFeatureBody>
-    </ColumnContainer>
+    </MainFeatureContainer>
   )
 }
 

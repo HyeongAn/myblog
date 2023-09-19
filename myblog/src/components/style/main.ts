@@ -2,6 +2,18 @@
 
 import style from 'styled-components'
 
+export const MainFeatureContainer = style.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+
+  @media (max-width: 960px) {
+    max-width: 600px;
+  }
+`
+
 export const MainFeatureHead = style.div`
   width: 100%;
   display: flex;
@@ -34,7 +46,7 @@ export const CarouselContainer = style.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     height: 500px;
   }
 `
@@ -57,7 +69,7 @@ export const CarouselCardContainer = style.div`
     border-radius: 20px;
     background-color: rgba(32, 33, 37, 30%);
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       height: 380px;
     }
   }
@@ -113,7 +125,7 @@ export const CarouselImageDiv = style.div`
   height: 480px;
   position: relative;
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     height: 380px;
   }
 `
@@ -123,6 +135,10 @@ export const IndexContainer = style.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 export const IndexHeader = style.h2`
@@ -142,6 +158,10 @@ export const IndexBody = style.div`
     display: flex;
     flex-direction: column;
     margin:20px 0 0 0;
+
+    @media (max-width: 960px) {
+      gap: 10px;
+    }
 
     & li {
       & p {

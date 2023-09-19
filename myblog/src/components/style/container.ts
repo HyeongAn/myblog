@@ -81,15 +81,18 @@ export const MainHeaderContainer = style.div`
 `
 
 export const MainBodyContainer = style.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   gap: 60px;
   max-width: 900px;
 
-  @media (max-width:640px) {
+  @media (max-width:960px) {
     width: 95%;
+    max-width: 600px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
   }
   
@@ -117,15 +120,16 @@ export const FlexibleImageContainer = style.div`
 
 // ? MainPage PostList에 관계된 Containers
 export const PostsListContainer = style.div`
-  width: 100%;
+  width: 95%;
   display: flex;
   align-items: center;
   margin: 120px 0;
   max-width: 900px;
   position: relative;
 
-  @media (max-width:640px) {
+  @media (max-width:960px) {
     width: 95%;
+    max-width: 600px;
     justify-content: center;
   }
 
@@ -140,7 +144,7 @@ export const PostGridContainer = style.section`
   gap: 20px;
   row-gap: 20px;
 
-  @media (max-width:640px) {
+  @media (max-width:960px) {
     grid-template-columns: 100%;
   }
 `

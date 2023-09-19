@@ -57,7 +57,7 @@ export const CategorySkeletonCarousel = style.div`
   border-radius: 20px;
   background-color: #F5F5F5;
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     height: 380px;
   }
 `
