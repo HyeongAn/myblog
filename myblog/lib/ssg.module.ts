@@ -30,12 +30,13 @@ export const getPostData = async (slug: string) => {
   const filePath = path.join(process.cwd(), '__posts', `${slug}.md`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
-  const parseContent = unified().use(markdown).use(remark2rehype).use(html).processSync(content)
+  //const parseContent = unified().use(markdown).use(remark2rehype).use(html).processSync(content)
 
   return {
     slug,
     data,
-    content: parseContent.value,
+    content,
+    // parseContent.value,
   }
 }
 

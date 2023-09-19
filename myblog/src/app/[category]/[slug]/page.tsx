@@ -1,4 +1,4 @@
-import { getCategoryId, getCategoryPost, getPostData, getPostSlug } from '../../../../lib/ssg.module'
+import { getCategoryId, getCategoryPost, getPostData } from '../../../../lib/ssg.module'
 import DetailPage from './detail-page'
 import { Metadata } from 'next'
 import { PostContainer, RowLeftContainer, TitleContainer } from '@/components/style/container'

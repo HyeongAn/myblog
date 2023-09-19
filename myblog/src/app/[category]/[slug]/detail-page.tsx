@@ -1,22 +1,23 @@
 'use client'
 import { Value } from '../../../../types/props'
-import { useEffect } from 'react'
-import hljs from 'highlight.js'
-import 'highlight.js/styles/github-dark.css'
+import { useEffect, useState } from 'react'
 import { ContentsContainer } from '@/components/style/container'
+import MarkdownView from '@/components/markdown/markdown-view'
 
 interface DetailPageProps {
   content: Value
 }
 
 const DetailPage = ({ content }: DetailPageProps) => {
+  const [markdown, setMarkdown] = useState<string>('')
+
   useEffect(() => {
-    hljs.highlightAll()
+    setMarkdown(content.toString())
   }, [])
 
   return (
     <ContentsContainer style={{ maxWidth: '768px' }}>
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <MarkdownView post={markdown} />
     </ContentsContainer>
   )
 }

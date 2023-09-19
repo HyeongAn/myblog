@@ -237,6 +237,7 @@ interface MutableRefObject<T> {
 공식문서에도 아래와 같이 설명하고 있다.
 
 > `useRef`로 생성된 객체와 일반적인 {current: ...} 객체의 차이점이라면 `useRef`는 매번 렌더링을 할 때 동일한 `ref`객체를 제공한다. `useRef`는 순수 JS객체를 생성하기 때문이다.
+>
 > [React-공식문서](https://ko.reactjs.org/docs/hooks-reference.html#useref)
 
 그렇다면 일반적으로 사용하던 `ref`를 통해 엘리먼트 노드에 접근하는 것은 어떻게 가능한 것일까?

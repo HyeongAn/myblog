@@ -46,7 +46,8 @@ p {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(39, 76, 144);
+  cursor: pointer;
 }
 
 img {
@@ -66,4 +67,12 @@ code {
   padding: 0.2em 0.4em;
   font-size: 14px;
   font-family: Menlo, Helvetica, Arial, sans-serif;
+}
+
+blockquote {
+  background: rgba(0, 156, 235, 0.1);
+  border-radius: 10px;
+  margin: 0;
+  margin-top: 20px;
+  padding: 16px 18px;
 }
