@@ -20,10 +20,6 @@ const TOC = () => {
     })
   }, [])
 
-  useEffect(() => {
-    console.log({ headingEls })
-  }, [headingEls])
-
   return (
     <>
       {headingEls?.map((heading, index) => {

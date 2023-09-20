@@ -31,7 +31,7 @@ export const TOCAside = style.aside`
       font-weight: 400;
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1365px) {
     display: none;
   }
 `

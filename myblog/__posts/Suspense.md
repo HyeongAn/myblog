@@ -131,7 +131,12 @@ return {
 
 `Promise`가 `pending`상태일 경우에는 `pending`상태의 `promise`를 그대로 `throw`해주고, `fulfilled`상태일 때는 결과값을 반환해주게 되는 것이다.
 
-> `read()`함수는 데이터 수신중에는 `suspender`변수에 저장되어 있는 API를 호출하는 코드를 반환하고 데이터 수신이 완료되면 데이터를 반환하게 된다.
+<Blockquote type="info">
+
+`read()`함수는 데이터 수신중에는 `suspender`변수에 저장되어 있는 API를 호출하는 코드를 반환하고 데이터 수신이 완료되면 데이터를 반환하게 된다.
+
+</Blockquote>
+
 
 이제 `Suspense`는 위의 3가지 상태를 바탕으로 컴포넌트를 마운트/언마운트를 판단하게 된다.
 

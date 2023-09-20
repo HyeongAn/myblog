@@ -238,9 +238,12 @@ interface MutableRefObject<T> {
 
 공식문서에도 아래와 같이 설명하고 있다.
 
-> `useRef`로 생성된 객체와 일반적인 {current: ...} 객체의 차이점이라면 `useRef`는 매번 렌더링을 할 때 동일한 `ref`객체를 제공한다. `useRef`는 순수 JS객체를 생성하기 때문이다.
->
-> [React-공식문서](https://ko.reactjs.org/docs/hooks-reference.html#useref)
+<Blockquote type="info">
+
+`useRef`로 생성된 객체와 일반적인 {current: ...} 객체의 차이점이라면 `useRef`는 매번 렌더링을 할 때 동일한 `ref`객체를 제공한다. `useRef`는 순수 JS객체를 생성하기 때문이다.
+
+[React-공식문서](https://ko.reactjs.org/docs/hooks-reference.html#useref)
+</Blockquote>
 
 그렇다면 일반적으로 사용하던 `ref`를 통해 엘리먼트 노드에 접근하는 것은 어떻게 가능한 것일까?
 
@@ -331,9 +334,12 @@ export default Test
 
 ## RefCallback
 
-> `ref`속성에 직접적으로 들어가는 타입은 `LegacyRef<T>`의 타입이다. `LegacyRef<T>`는 `string`, 혹은 `Ref<T>`가 들어갈 수 있는것을 볼 수 있다.
->
-> 그 위에`Ref<T>`는 또 `RefCallback<T>`, `RefObject<T> `, `null`이 가능하므로 `string`이 들어가는건 `Legacy`이므로 제외, `null`도 제외하면 실제로 `ref`에 들어가는 형태는 크게 `RefCallback<T>`, `RefObject<T>`가 되겠다.
+<Blockquote type="info">
+
+`ref`속성에 직접적으로 들어가는 타입은 `LegacyRef<T>`의 타입이다. `LegacyRef<T>`는 `string`, 혹은 `Ref<T>`가 들어갈 수 있는것을 볼 수 있다.
+
+그 위에`Ref<T>`는 또 `RefCallback<T>`, `RefObject<T> `, `null`이 가능하므로 `string`이 들어가는건 `Legacy`이므로 제외, `null`도 제외하면 실제로 `ref`에 들어가는 형태는 크게 `RefCallback<T>`, `RefObject<T>`가 되겠다.
+</Blockquote>
 
 위에서 언급했던것 처럼 `useRef`에 이어 지금까지 이야기 했던것 `ref`는 `RefObject<T>` 형태의 `ref`였다.
 
@@ -370,7 +376,7 @@ export default Test
 
 위에서 보았듯 `index.d.ts`에서 `useRef`의 정의가 오버로딩되어 있는 것을 볼 수 있었다. 가끔 언제 어떤 `useRef`가 쓰이는지 몰라서 코드를 짤때 에러가 생하게 되는데 오버로딩 되는 `useRef`를 하나씩 뜯어보자.
 
-### 1. useRef<T>(initalValue: T): MutableRefObject<T>
+### 1. useRef< T >(initalValue: T): MutableRefObject< T >
 
 인자의 타입과 `generic`의 타입이 `T`로 일치하는 경우 `MutableRefObject<T>`를 반환한다. 즉, `MutableRefObject<T>`의 경우 `current`프로퍼티 그 자체를 직접 변경할 수 있다.
 
@@ -405,7 +411,7 @@ export default Test
 
 `.current`프로퍼티를 수정할 수 없는 것을 볼 수 있다. 이는 `useRef` 두 번째 케이스이므로 `readonly`인 `RefObject`를 반환했기 때문이다.
 
-### 2. useRef<T>(initialValue: T|null): RefObject<T>
+### 2. useRef< T >(initialValue: T|null): RefObject< T >
 
 인자의 타입이 `null`을 허용하는 경우 `RefObject<T>`를 반환한다. `RefObject<T>`는 위의 예제에서 보았듯이 `.current`프로퍼티를 직접 수정할 수 없다.
 
