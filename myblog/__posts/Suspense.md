@@ -1,14 +1,14 @@
 ---
 title: 'React Suspense'
 description: '현재의 프로젝트에서 자사 라이브러리를 사용하기 위해 React.lazy를 사용하여 컴포넌트를 동적으로 임포트하고 사용했었다. 내가 사용한 react의 버전은 14인데, v16.6에서 실험적인 기능으로 suspense가 등장하게되어 현재 사용중인 React.lazy와 같이 사용할 수 있지 않을까하여 기록해 본다.'
-coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
+coverImage: 'https://velog.velcdn.com/images/gyutato/post/e1568970-21a7-492a-a538-dd863dc09412/image.png'
 date: '2023/08/26'
 keywords: ['react', 'suspense', 'waterfall', '경쟁상태', 'fallback', '고찰', 'yoonhu']
 category: 'react'
 outline: 'React v18에 정식으로 등록된 Suspense에 대해 글을 써본다.'
 ---
 
-![](https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png)
+![](https://velog.velcdn.com/images/gyutato/post/e1568970-21a7-492a-a538-dd863dc09412/image.png)
 
 # Suspense
 

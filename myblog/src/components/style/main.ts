@@ -151,6 +151,7 @@ export const IndexBody = style.div`
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  max-height: 600px;
 
   & ul {
     gap: 20px;
