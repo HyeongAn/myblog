@@ -3,15 +3,16 @@ import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
 import { MainContainer, PostsListContainer } from '@/components/style/container'
 import MainHeader from '@/components/home/main/main-header'
 import Posts from '@/components/home/posts/posts'
+import useInfiniteScroll from '../../../lib/hooks/useInfiniteScroll'
 
 interface CategoryProps {
   params: { category: string }
 }
 
+// category page
 const Category = async ({ params }: CategoryProps) => {
   const categories = await getCategory()
   const postData = (await getPosts()).filter((post) => post.data.category === params.category)
-
   return (
     <div
       style={{

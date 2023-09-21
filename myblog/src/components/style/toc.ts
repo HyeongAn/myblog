@@ -17,7 +17,7 @@ export const TOCAside = style.aside`
     font-weight: 400;
     font-size: 14px;
     opacity: 0.5;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
     line-height: 1.5;
 
     &:hover {
@@ -29,6 +29,7 @@ export const TOCAside = style.aside`
       opacity: 0.8;
       font-size: 16px;
       font-weight: 400;
+      transition: all 0.2s ease;
     }
   }
   @media (max-width: 1365px) {
