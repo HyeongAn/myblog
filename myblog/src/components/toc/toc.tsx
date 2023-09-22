@@ -5,20 +5,16 @@ import CustomLink from './custom-link'
 import useObservation from '../../../lib/hooks/useObservation'
 
 const TOC = () => {
+  // header에 있는 id값을 저장해둠.
   const [currentId, setCurrentId] = useState<string>('')
-  // 맨처음엔 Element였음.
   const [headingEls, setHeadingEls] = useState<HTMLElement[]>([])
 
   useEffect(() => {
-    const observer = useObservation(setCurrentId)
     const headingElements: HTMLElement[] = Array.from(document.querySelectorAll('h1, h2, h3'))
-
     setHeadingEls(headingElements)
-
-    headingElements.map((header) => {
-      observer.observe(header)
-    })
   }, [])
+
+  useObservation(setCurrentId, headingEls)
 
   return (
     <>
