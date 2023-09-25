@@ -1,19 +1,25 @@
 'use client'
-import React from 'react'
-import { PostListProps } from '../../../../types/props'
+import React, { useEffect, useState } from 'react'
+import { PostData, PostListProps } from '../../../../types/props'
 import { PostGridContainer } from '@/components/style/container'
 import PostCard from '@/components/home/posts/post-card'
 
 const SuggestPage = ({ postData }: PostListProps) => {
+  const [suggestPost, setSuggestPost] = useState<PostData[]>()
+  useEffect(() => {
+    setSuggestPost(postData.slice(0, 4))
+  }, [])
   return (
     <>
-      {postData.length > 0 ? (
+      {suggestPost && suggestPost.length > 0 ? (
         <div style={{ width: '100%', display: 'flex', alignItems: 'center', maxWidth: '768px', marginTop: '20px' }}>
-          <span style={{ fontSize: '24px', fontWeight: '700' }}>{`비슷한 포스트가 ${postData.length}개 있어요.`}</span>
+          <span
+            style={{ fontSize: '24px', fontWeight: '700' }}
+          >{`비슷한 포스트가 ${suggestPost.length}개 있어요.`}</span>
         </div>
       ) : null}
       <PostGridContainer style={{ maxWidth: '768px', marginTop: '20px' }}>
-        {postData && postData.map((data, index) => <PostCard postData={data} key={`post-card-${index}`} />)}
+        {suggestPost && suggestPost.map((data, index) => <PostCard postData={data} key={`post-card-${index}`} />)}
       </PostGridContainer>
     </>
   )

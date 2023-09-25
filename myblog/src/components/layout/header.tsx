@@ -1,11 +1,11 @@
 'use client'
 import Link from 'next/link'
 import { HeadContainer } from '../style/container'
-import { useContext, useEffect, useState } from 'react'
-import miniMenu from '../../../assets/svg/mini-menu.svg'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import SlideMenu from '../slidemenu/slide-menu'
-import SlideMenuContents from '../slidemenu/slide-menu-contents'
+import { DarkThemeButton, LightThemeButton, ThemeButton } from '../style/buttons/button'
+import moon from '../../../assets/svg/moon-icon.svg'
+import sun from '../../../assets/svg/sun-icon.svg'
 
 interface HeaderProps {
   xWidth: number
@@ -31,12 +31,17 @@ const Header = ({ xWidth }: HeaderProps) => {
     }
   }
 
+  const themeModeHandle = () => {
+    const newTheme = localStorage.theme === 'dark' ? 'light' : 'dark'
+    localStorage.theme = newTheme
+    document.body.dataset.theme = newTheme
+  }
+
   return (
     <HeadContainer>
       <Link
         href="/"
         style={{
-          color: 'black',
           margin: '0',
           fontStyle: 'italic',
           fontSize: '24px',
@@ -46,14 +51,26 @@ const Header = ({ xWidth }: HeaderProps) => {
       >
         An.
       </Link>
-      {/* {width >= 640 ? ( */}
-      <Link
-        href="https://www.notion.so/87d3f1d26daf49368f9dfe7119f2cb84?pvs=4"
-        target="_blank"
-        style={{ color: 'black', marginRight: '8px', fontStyle: 'italic', fontWeight: '700', padding: '0 20px' }}
-      >
-        About
-      </Link>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {/* {width >= 640 ? ( */}
+        <Link
+          href="https://www.notion.so/87d3f1d26daf49368f9dfe7119f2cb84?pvs=4"
+          target="_blank"
+          style={{ marginRight: '8px', fontStyle: 'italic', fontWeight: '700' }}
+        >
+          About
+        </Link>
+        <DarkThemeButton>
+          <ThemeButton onClick={() => themeModeHandle()}>
+            <Image src={sun} alt="light theme icon" />
+          </ThemeButton>
+        </DarkThemeButton>
+        <LightThemeButton>
+          <ThemeButton onClick={() => themeModeHandle()}>
+            <Image src={moon} alt="dark theme icon" />
+          </ThemeButton>
+        </LightThemeButton>
+      </div>
       {/* ) : (
         <div
           style={{

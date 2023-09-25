@@ -10,12 +10,12 @@ const MainIndex = ({ postData }: MainPostDataProps) => {
       <IndexHeader>Lately.</IndexHeader>
       <IndexBody>
         <ul>
-          {postData.map((data, index) => {
+          {postData.slice(0, 10).map((data, index) => {
             return (
               <Link href={`/${data.data.category}/${data.slug}`} key={`index-data-${index}`}>
                 <li>
-                  <p style={{ color: 'black', opacity: '0.6', fontSize: '12px' }}>{data.data.date}</p>
-                  <p style={{ color: 'black', fontSize: '14px' }}>{data.data.title}</p>
+                  <p style={{ opacity: '0.6', fontSize: '12px' }}>{data.data.date}</p>
+                  <p style={{ fontSize: '14px' }}>{data.data.title}</p>
                 </li>
               </Link>
             )

@@ -7,11 +7,9 @@ const CarouselCardInfo = ({ postData }: CarouselCardInfoProps) => {
     <CarouselCardInfoContainer>
       <RowLeftContainer style={{ gap: '10px' }}>
         <CarouselRoundDiv>{postData.data.category}</CarouselRoundDiv>
-        <span style={{ color: '#202125', marginTop: 'auto' }}>{postData.data.date}</span>
+        <span style={{ marginTop: 'auto' }}>{postData.data.date}</span>
       </RowLeftContainer>
-      <span style={{ color: '#202125', fontSize: '24px', marginTop: '10px', fontWeight: 'bold' }}>
-        {postData.data.title}
-      </span>
+      <span style={{ fontSize: '24px', marginTop: '10px', fontWeight: 'bold' }}>{postData.data.title}</span>
     </CarouselCardInfoContainer>
   )
 }

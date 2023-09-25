@@ -30,7 +30,16 @@ export interface PostDataProps {
 }
 
 export interface IconButtonProps {
+  image: string
+  alt: string
+  name: string
   src: string | StaticImport
+  href?: string
+  managed?: boolean
+}
+
+export interface IconProps {
+  image: string
   alt: string
   name: string
   href?: string
@@ -38,7 +47,7 @@ export interface IconButtonProps {
 }
 
 export interface ProfileIconButtonProps {
-  profile: IconButtonProps
+  profile: IconProps
 }
 
 export interface CloseButtonProps {

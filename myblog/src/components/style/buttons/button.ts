@@ -1,6 +1,6 @@
 'use client'
 
-import style from 'styled-components'
+import style, { keyframes } from 'styled-components'
 
 interface ControllerProps {
   $isClick?: boolean
@@ -56,7 +56,7 @@ export const CloseButton = style.button`
 `
 
 export const IconLinkContainer = style.div`
-  width: 100%;
+  width: 25px;
   height: 25px;
   border-radius: 50%;
   display: flex;
@@ -66,12 +66,12 @@ export const IconLinkContainer = style.div`
   position: relative;
 
   & [role='tooltip'] {
-    height: 18px;
+    height: 24px;
     visibility: hidden;
     position: absolute;
     background: #F9F9F9;
     border-radius: 6px;
-    bottom: -25px;
+    bottom: -28px;
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
     padding: 0 8px;
     color: black;
@@ -100,17 +100,76 @@ export const IconLinkContainer = style.div`
 `
 
 export const IconLink = style.a`
-  width: 18px;
-  height: 18px;
+  color: var(--font--color);
 `
 
 export const ControllerButton = style.button<ControllerProps>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--font--color);
   cursor: pointer;
-  background: ${(props) => (props.$isClick ? 'black' : 'transparent')};
+  background: ${(props) => (props.$isClick ? 'var(--font--color)' : 'transparent')};
   padding: 0;
   
+`
+
+export const rotate_image = keyframes`
+  0% {
+    transform: rotate(0deg);
+    width: 10px;
+    height: 10px;
+  }
+  70% {
+    transform: rotate(-400deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+    width: 20px;
+    height: 20px;
+  }
+`
+
+export const ThemeButton = style.button`
+  border: none;
+  background-color: transparent;
+  
+  & img {
+    width: 20px;
+    height: 20px;
+    animation: ${rotate_image} 0.4s linear;
+    transform-origin: 50% 50%;
+  }
+`
+
+export const DarkThemeButton = style.div`
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+  display: var(--dis--light);
+  border-radius: 50%;
+  
+  &:hover {
+    background-color: var(--hv-cr);
+    transition: background-color 0.2s ease;
+  }
+`
+
+export const LightThemeButton = style.div`
+  width: 40px;
+  height: 40px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  display: var(--dis--black);
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--hv-cr);
+    transition: background-color 0.2s ease;
+  }
 `

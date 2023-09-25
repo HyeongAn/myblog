@@ -108,13 +108,17 @@ export const CarouselCardInfoContainer = style.div`
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+
+  & span {
+    color: var(--font--color);
+  }
 `
 
 export const CarouselRoundDiv = style.span`
   border-radius: 20px;
-  border: 1.5px solid #202125;
+  border: 1.5px solid var(--font--color);
   padding: 5px 10px;
-  color: #202125;
+  color: var(--font--color);
   font-size: 14px;
   font-weight: 800;
 `
@@ -162,6 +166,10 @@ export const IndexBody = style.div`
 
     @media (max-width: 960px) {
       gap: 10px;
+    }
+
+    a {
+      color: var(--font--color);
     }
 
     & li {

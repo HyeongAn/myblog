@@ -12,6 +12,11 @@ export const CategoryContainer = style.nav`
   column-gap: 10px;
   row-gap: 10px;
   max-width: 640px;
+
+  @media (max-width: 390px) {
+    width: 95%;
+    justify-content: center;
+  }
 `
 
 export const CategoryWrapper = style.div`
@@ -25,13 +30,14 @@ export const CategoryKey = style.p<CategoryProps>`
   font-size: 18px;
   font-weight: ${(props) => (props.$isClicked ? '700' : '400')};
   margin: 0;
-  color: #202125;
+  color: var(--font--color);
 
 `
 
+// color: #202125;
 export const CategoryValue = style.p<CategoryProps>`
   font-size: 12px;
   font-weight: ${(props) => (props.$isClicked ? '700' : '400')};
   margin: 0;
-  color: #202125;
+  color: var(--font--color);
 `

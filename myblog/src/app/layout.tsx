@@ -27,9 +27,20 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const setThemeMode = `
+    if(!window.localStorage.getItem('theme')){
+      localStorage.theme = 'light'
+    }
+    document.body.dataset.theme = window.localStorage.getItem('theme')
+  `
   return (
     <html>
-      <body>
+      <body suppressHydrationWarning={true}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: setThemeMode,
+          }}
+        ></script>
         <StyledComponentsRegistry>
           <Layout>{children}</Layout>
         </StyledComponentsRegistry>

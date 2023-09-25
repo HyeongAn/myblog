@@ -2,7 +2,7 @@
 import style from 'styled-components'
 
 export const BlockquoteWarn = style.blockquote`
-  color: #4D361A;
+  color: var(--block--warn);
   background-color: #F7BE6824;
   line-height: 2;
 
@@ -12,7 +12,7 @@ export const BlockquoteWarn = style.blockquote`
 `
 
 export const BlockquoteInfo = style.blockquote`
-  color: #003B59;
+color: var(--block--info);
   background-color: #009CEB1a;
   line-height: 2;
   
@@ -22,7 +22,7 @@ export const BlockquoteInfo = style.blockquote`
 `
 
 export const BlockquoteDanger = style.blockquote`
-  color: #821006;
+color: var(--block--dang);
   background-color: #FF41331A;
   line-height: 2;
 
@@ -32,7 +32,7 @@ export const BlockquoteDanger = style.blockquote`
 `
 
 export const BlockquoteDefault = style.blockquote`
-  color: #212124;
+color: var(--block--defa);
   background-color: #f2f3f6;
   line-height: 2;
 

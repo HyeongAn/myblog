@@ -34,6 +34,10 @@ export const RowLeftContainer = style.div`
   height: 100%;
   display: flex;
   align-items: center;
+
+  & span {
+    color: var(--font--color);
+  }
 `
 
 export const RowBetweenContainer = style.div`
@@ -51,9 +55,12 @@ export const HeadContainer = style.div`
   min-height: 70px;
   position: sticky;
   top: 0;
-  background-color: white;
-  z-index: 5;
+  background-color: var(--back--color);
+  z-index: 99;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  & a {
+    color: var(--font--color);
+  }
 `
 
 // ? HomPage에 있는 Main Slide Containers
