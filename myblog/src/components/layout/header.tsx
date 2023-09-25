@@ -42,11 +42,10 @@ const Header = ({ xWidth }: HeaderProps) => {
       <Link
         href="/"
         style={{
-          margin: '0',
           fontStyle: 'italic',
           fontSize: '24px',
           fontWeight: '700',
-          padding: '0 20px',
+          margin: '20px 20px',
         }}
       >
         An.

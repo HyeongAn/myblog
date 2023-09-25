@@ -166,7 +166,7 @@ const SvgStyle = ({ image }: SvgProps) => {
       )
     case 'velog':
       return (
-        <svg width="20" height="20" viewBox="0 0 192 192" fill="currentColor">
+        <svg width="18" height="18" viewBox="0 0 192 192" fill="currentColor">
           <path
             fillRule="evenodd"
             clipRule="evenodd"

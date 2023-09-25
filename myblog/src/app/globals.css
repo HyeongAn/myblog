@@ -25,6 +25,7 @@ body[data-theme='dark'] {
   --block--info: #d7f3fa;
   --block--dang: #f7e5e4;
   --block--defa: #eaebee;
+  --skele--box: #282a32;
 }
 
 body[data-theme='light'] {
@@ -39,6 +40,7 @@ body[data-theme='light'] {
   --block--info: #003b59;
   --block--dang: #821006;
   --block--defa: #212124;
+  --skele--box: #f5f5f5;
 }
 
 main {

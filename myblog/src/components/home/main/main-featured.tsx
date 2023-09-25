@@ -7,7 +7,7 @@ import { MainPostDataProps } from '../../../../types/props'
 import { useEffect, useRef, useState } from 'react'
 
 const MainFeatured = ({ postData }: MainPostDataProps) => {
-  const [currentIndex, setCurrentIndex] = useState(1)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout>()
 

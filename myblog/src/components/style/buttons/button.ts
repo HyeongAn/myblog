@@ -56,8 +56,8 @@ export const CloseButton = style.button`
 `
 
 export const IconLinkContainer = style.div`
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -66,12 +66,12 @@ export const IconLinkContainer = style.div`
   position: relative;
 
   & [role='tooltip'] {
-    height: 24px;
+    height: 26px;
     visibility: hidden;
     position: absolute;
     background: #F9F9F9;
     border-radius: 6px;
-    bottom: -28px;
+    bottom: -30px;
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
     padding: 0 8px;
     color: black;
@@ -83,7 +83,7 @@ export const IconLinkContainer = style.div`
     transition: 0.3s;
   }
   &:hover {
-    background-color: #E2E8F0;
+    background-color: var(--hv-cr);
     transition: all 0.2s;
     & [role='tooltip'] {
       visibility: visible;
@@ -101,6 +101,11 @@ export const IconLinkContainer = style.div`
 
 export const IconLink = style.a`
   color: var(--font--color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const ControllerButton = style.button<ControllerProps>`
@@ -117,14 +122,22 @@ export const ControllerButton = style.button<ControllerProps>`
 export const rotate_image = keyframes`
   0% {
     transform: rotate(0deg);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
-  70% {
-    transform: rotate(-400deg);
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+    width: 22px;
+    height: 22px;
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(0deg);
     width: 20px;
     height: 20px;
   }
@@ -137,7 +150,7 @@ export const ThemeButton = style.button`
   & img {
     width: 20px;
     height: 20px;
-    animation: ${rotate_image} 0.4s linear;
+    animation: ${rotate_image} 0.2s linear;
     transform-origin: 50% 50%;
   }
 `

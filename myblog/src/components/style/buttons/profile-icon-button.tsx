@@ -7,7 +7,7 @@ import SvgStyle from '../svg-style'
 const ProfileIconButtons = ({ profile }: ProfileIconButtonProps) => {
   return (
     <IconLinkContainer>
-      <div style={{ width: '24px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ width: '26px', height: '26px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <IconLink aria-describedby="icon-info" target="_blank" href={profile.href}>
           <SvgStyle image={profile.image} />
         </IconLink>

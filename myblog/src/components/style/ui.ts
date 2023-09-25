@@ -3,7 +3,7 @@
 import style from 'styled-components'
 
 export const CategorySkeletonContainer = style.div`
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
   border-radius: 10px;
   width: 500px;
   height: 20px;
@@ -24,14 +24,14 @@ export const CategorySkeletonCardImage = style.div`
   width: 100%;
   height: 340px;
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
 `
 
 export const CategorySkeletonTitle = style.div`
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
   margin: 80px 0 15px 0;
 `
 
@@ -39,14 +39,14 @@ export const CategorySkeletonInfo = style.div`
   width: 100%;
   height: 20px;
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
 `
 
 export const CategorySkeletonContents = style.div`
   width: 100%;
   height: 70vh;
   border-radius: 10px;
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
 `
 
 export const CategorySkeletonCarousel = style.div`
@@ -55,7 +55,7 @@ export const CategorySkeletonCarousel = style.div`
   height: 480px;
   position: relative;
   border-radius: 20px;
-  background-color: #F5F5F5;
+  background-color: var(--skele--box);
 
   @media (max-width: 768px) {
     height: 380px;
@@ -82,7 +82,7 @@ export const CategorySkeletonIndexBody = style.div`
     margin:20px 0 0 0;
 
     & li {
-      background-color: #F5F5F5;
+      background-color: var(--skele--box);
       border-radius: 5px;
     }
   }
