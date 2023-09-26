@@ -8,6 +8,7 @@ import SuggestPage from './suggest-page'
 import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
 import { TOCAside } from '@/components/style/toc'
 import TOC from '@/components/toc/toc'
+import Giscus from '@/components/giscus'
 
 interface DetailPageProps {
   content: string
@@ -36,7 +37,9 @@ const DetailPage = ({ content, postData }: DetailPageProps) => {
           </div>
           <MarkdownView post={content} />
         </ContentsContainer>
+        {/* 여기 댓글기능 넣어야함. */}
         <SuggestPage postData={postData} />
+        <Giscus />
         <SlideMenuProfile />
       </motion.div>
     </AnimatePresence>

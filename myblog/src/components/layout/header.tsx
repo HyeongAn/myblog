@@ -1,17 +1,19 @@
 'use client'
 import Link from 'next/link'
 import { HeadContainer } from '../style/container'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { DarkThemeButton, LightThemeButton, ThemeButton } from '../style/buttons/button'
 import moon from '../../../assets/svg/moon-icon.svg'
 import sun from '../../../assets/svg/sun-icon.svg'
+import { themeContext } from '../../../lib/context.module'
 
 interface HeaderProps {
   xWidth: number
 }
 
 const Header = ({ xWidth }: HeaderProps) => {
+  const { setTheme } = useContext(themeContext)
   const [width, setWidth] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
   const [xPosition, setXPosition] = useState(xWidth)
@@ -35,6 +37,7 @@ const Header = ({ xWidth }: HeaderProps) => {
     const newTheme = localStorage.theme === 'dark' ? 'light' : 'dark'
     localStorage.theme = newTheme
     document.body.dataset.theme = newTheme
+    setTheme(newTheme)
   }
 
   return (

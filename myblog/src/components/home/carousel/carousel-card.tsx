@@ -2,8 +2,16 @@
 import Link from 'next/link'
 import { CarouselCardProps } from '../../../../types/props'
 import Image from 'next/image'
-import { CarouselCardContainer, CarouselCategory, CarouselImageDiv, CarouselOutline } from '@/components/style/main'
+import {
+  CarouselCardContainer,
+  CarouselCardInfoContainer,
+  CarouselCategory,
+  CarouselImageDiv,
+  CarouselOutline,
+  CarouselRoundDiv,
+} from '@/components/style/main'
 import CarouselCardInfo from './carousel-card-info'
+import { RowLeftContainer } from '@/components/style/container'
 
 const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardProps) => {
   return (
@@ -24,7 +32,13 @@ const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardP
               style={{ borderRadius: '20px', objectFit: 'cover' }}
             />
           </CarouselImageDiv>
-          <CarouselCardInfo postData={postData} />
+          <CarouselCardInfoContainer>
+            <RowLeftContainer style={{ gap: '10px' }}>
+              <CarouselRoundDiv>{postData.data.category}</CarouselRoundDiv>
+              <span style={{ marginTop: 'auto' }}>{postData.data.date}</span>
+            </RowLeftContainer>
+            <span style={{ fontSize: '24px', marginTop: '10px', fontWeight: 'bold' }}>{postData.data.title}</span>
+          </CarouselCardInfoContainer>
           <div role="tooltip">
             <CarouselCategory>{postData.data.category}</CarouselCategory>
             <CarouselOutline>{postData.data.outline}</CarouselOutline>
