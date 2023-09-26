@@ -39,8 +39,8 @@ const DetailPage = ({ content, postData }: DetailPageProps) => {
         </ContentsContainer>
         {/* 여기 댓글기능 넣어야함. */}
         <SuggestPage postData={postData} />
-        <Giscus />
         <SlideMenuProfile />
+        <Giscus />
       </motion.div>
     </AnimatePresence>
   )

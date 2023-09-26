@@ -35,7 +35,7 @@ const Giscus = () => {
     loadGiscus()
   }, [loadGiscus])
 
-  return <section id="giscusComments" />
+  return <section id="giscusComments" style={{ margin: '100px 0' }} />
 }
 
 export default Giscus

@@ -8,7 +8,15 @@ import SlideMenuProfileCurrent from './slider-menu-profile-current'
 
 const SlideMenuProfile = () => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        marginTop: '80px',
+      }}
+    >
       <SlideProfileContainer>
         <div>
           <Image src={nukiProfilePicture} alt="profile image" fill style={{ objectFit: 'contain' }} />
