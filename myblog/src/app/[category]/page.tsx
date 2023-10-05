@@ -10,7 +10,7 @@ interface CategoryProps {
 }
 
 // category page
-// test1
+// test2
 const Category = async ({ params }: CategoryProps) => {
   const categories = await getCategory()
   const postData = (await getPosts()).filter((post) => post.data.category === params.category)
