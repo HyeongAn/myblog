@@ -1,6 +1,5 @@
 'use client'
-import { PostData, Value } from '../../../../types/props'
-import { useEffect, useState } from 'react'
+import { PostData } from '../../../../types/props'
 import { ContentsContainer } from '@/components/style/container'
 import MarkdownView from '@/components/markdown/markdown-view'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -37,7 +36,6 @@ const DetailPage = ({ content, postData }: DetailPageProps) => {
           </div>
           <MarkdownView post={content} />
         </ContentsContainer>
-        {/* 여기 댓글기능 넣어야함. */}
         <SuggestPage postData={postData} />
         <SlideMenuProfile />
         <Giscus />
