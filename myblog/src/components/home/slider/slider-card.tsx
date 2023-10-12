@@ -30,6 +30,8 @@ const SliderCard = ({ data, slug, category }: SlideCardProps) => {
             objectFit: 'cover',
           }}
           layout="fill"
+          priority
+          sizes="100%"
           alt="cover Image"
           src={data.coverImage}
         />

@@ -19,7 +19,14 @@ const SlideMenuProfile = () => {
     >
       <SlideProfileContainer>
         <div>
-          <Image src={nukiProfilePicture} alt="profile image" fill style={{ objectFit: 'contain' }} />
+          <Image
+            src={nukiProfilePicture}
+            alt="profile image"
+            fill
+            sizes="100%"
+            priority
+            style={{ objectFit: 'contain' }}
+          />
         </div>
       </SlideProfileContainer>
       <ColumnCenterContainer>

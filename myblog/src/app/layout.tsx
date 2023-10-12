@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: setThemeMode,
           }}
-        ></script>
+        />
         <StyledComponentsRegistry>
           <Layout>{children}</Layout>
         </StyledComponentsRegistry>

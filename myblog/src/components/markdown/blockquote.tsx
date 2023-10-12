@@ -21,69 +21,69 @@ const blockquoteStyles = {
 }
 
 const Blockquote = (props: BlockquoteProps) => {
-  const [mounted, setMounted] = useState<boolean>(false)
+  // const [mounted, setMounted] = useState<boolean>(false)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // useEffect(() => {
+  //   setMounted(true)
+  // }, [])
 
   switch (props.type) {
     case 'warn':
       return (
-        mounted && (
-          <BlockquoteWarn style={blockquoteStyles}>
-            <div>
-              {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
-              <Image src={lightning} alt="lightning image" style={{ width: '18px' }} />
-            </div>
-            <div>
-              <span>{props.children}</span>
-            </div>
-          </BlockquoteWarn>
-        )
+        // mounted && (
+        <BlockquoteWarn style={blockquoteStyles}>
+          <div>
+            {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
+            <Image src={lightning} alt="lightning image" style={{ width: '18px' }} />
+          </div>
+          <div>
+            <span>{props.children}</span>
+          </div>
+        </BlockquoteWarn>
       )
+    //)
     case 'info':
       return (
-        mounted && (
-          <BlockquoteInfo style={blockquoteStyles}>
-            <div>
-              {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
-              <Image src={bulb} alt="bulb image" style={{ width: '18px' }} />
-            </div>
-            <div>
-              <span>{props.children}</span>
-            </div>
-          </BlockquoteInfo>
-        )
+        // mounted && (
+        <BlockquoteInfo style={blockquoteStyles}>
+          <div>
+            {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
+            <Image src={bulb} alt="bulb image" style={{ width: '18px' }} />
+          </div>
+          <div>
+            <span>{props.children}</span>
+          </div>
+        </BlockquoteInfo>
       )
+    //)
     case 'danger':
       return (
-        mounted && (
-          <BlockquoteDanger style={blockquoteStyles}>
-            <div>
-              {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
-              <Image src={danger} alt="danger image" style={{ width: '18px' }} />
-            </div>
-            <div>
-              <span>{props.children}</span>
-            </div>
-          </BlockquoteDanger>
-        )
+        // mounted && (
+        <BlockquoteDanger style={blockquoteStyles}>
+          <div>
+            {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
+            <Image src={danger} alt="danger image" style={{ width: '18px' }} />
+          </div>
+          <div>
+            <span>{props.children}</span>
+          </div>
+        </BlockquoteDanger>
       )
+    // )
     default:
       return (
-        mounted && (
-          <BlockquoteDefault style={blockquoteStyles}>
-            <div>
-              {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
-              <Image src={paper} alt="paper image" style={{ width: '18px' }} />
-            </div>
-            <div>
-              <span>{props.children}</span>
-            </div>
-          </BlockquoteDefault>
-        )
+        // mounted && (
+        <BlockquoteDefault style={blockquoteStyles}>
+          <div>
+            {/* 일반적인 svg태그 자체로 넣으면 안됨 */}
+            <Image src={paper} alt="paper image" style={{ width: '18px' }} />
+          </div>
+          <div>
+            <span>{props.children}</span>
+          </div>
+        </BlockquoteDefault>
       )
+    // )
   }
 }
 

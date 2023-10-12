@@ -29,6 +29,12 @@ const CustomLink = ({ href, children, hNumber, isPass }: LinkProps) => {
             {children}
           </Link>
         )
+      case 'H4':
+        return (
+          <Link data-active={isPass} style={{ marginLeft: '36px' }} href={href}>
+            {children}
+          </Link>
+        )
     }
   }
 

@@ -10,16 +10,23 @@ const useInfiniteScroll = (): [React.RefObject<HTMLDivElement>, number] => {
   const [count, setCount] = useState(1)
   const targetRef = useRef<HTMLDivElement>(null)
 
-  const handleIntersect = useCallback(([entry]: IntersectionObserverEntry[], observe: IntersectionObserver) => {
-    if (entry.isIntersecting) {
-      setCount((prev) => prev + 1)
-      observe.disconnect()
-    }
-  }, [])
+  const handleIntersect = useCallback(
+    ([entry]: IntersectionObserverEntry[], observe: IntersectionObserver) => {
+      if (entry.isIntersecting) {
+        setCount((prev) => prev + 1)
+        observe.disconnect()
+      }
+    },
+    [count]
+  )
 
   useEffect(() => {
     const observe = new IntersectionObserver(handleIntersect, defaultOption)
     targetRef.current && observe.observe(targetRef.current)
+
+    return () => {
+      observe.disconnect()
+    }
   }, [handleIntersect, targetRef.current])
   return [targetRef, count]
 }

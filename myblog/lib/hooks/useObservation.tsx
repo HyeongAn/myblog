@@ -44,6 +44,8 @@ const useObservation = (setState: Dispatch<SetStateAction<string>>, headingEleme
     headingElements.map((header) => {
       observe.observe(header)
     })
+
+    return () => observe.disconnect()
   }, [headingElements])
 }
 

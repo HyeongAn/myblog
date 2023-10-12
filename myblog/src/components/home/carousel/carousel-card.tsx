@@ -29,6 +29,8 @@ const CarouselCard = ({ postData, currentIndex, setCurrentIndex }: CarouselCardP
               src={postData.data.coverImage}
               alt={`carousel-image-${currentIndex}`}
               fill
+              priority
+              sizes="100%"
               style={{ borderRadius: '20px', objectFit: 'cover' }}
             />
           </CarouselImageDiv>

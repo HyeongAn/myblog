@@ -2,9 +2,11 @@
 import ReactMarkdown from 'react-markdown'
 import slug from 'rehype-slug'
 import raw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Blockquote from './blockquote'
+import { PluggableList } from 'unified'
 // ?  다크모드 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // ? 라이트 모드 import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // ? 노션 라이트 모드 import { prism } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -17,7 +19,8 @@ interface MarkdownViewProps {
 const MarkdownView = ({ post }: MarkdownViewProps) => {
   return (
     <ReactMarkdown
-      rehypePlugins={[raw as any, slug]}
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[raw, slug] as PluggableList}
       components={{
         code({ inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '')

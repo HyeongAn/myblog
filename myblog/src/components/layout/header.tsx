@@ -18,9 +18,9 @@ const Header = ({ xWidth }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [xPosition, setXPosition] = useState(xWidth)
 
-  useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [])
+  // useEffect(() => {
+  //   setWidth(window.innerWidth)
+  // }, [])
 
   // button 클릭 시 토글
   const toggleMenu = () => {

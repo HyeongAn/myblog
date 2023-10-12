@@ -1,10 +1,11 @@
 'use client'
-import { PostCardContainer, PostCardHeader, PostCardTitle } from '@/components/style/container'
+import { PostCardContainer } from '@/components/style/container'
 import { PostDataProps } from '../../../../types/props'
 import Link from 'next/link'
 import Image from 'next/image'
 import CarouselCardInfo from '../carousel/carousel-card-info'
 import { CarouselCategory, CarouselOutline } from '@/components/style/main'
+import React from 'react'
 
 const PostCard = ({ postData }: PostDataProps) => {
   return (
@@ -16,6 +17,7 @@ const PostCard = ({ postData }: PostDataProps) => {
             alt={`post-${postData.data.category}-${postData.slug}`}
             style={{ borderRadius: '20px', objectFit: 'cover' }}
             fill
+            sizes="100%"
           />
         </div>
         <CarouselCardInfo postData={postData} />
@@ -28,4 +30,4 @@ const PostCard = ({ postData }: PostDataProps) => {
   )
 }
 
-export default PostCard
+export default React.memo(PostCard)
