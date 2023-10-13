@@ -152,6 +152,8 @@ table {
       font-weight: 300;
       border-bottom: 1px solid var(--table--border);
       padding-left: 20px;
+      word-break: break-all;
+      font-size: 80%;
     }
   }
 }
