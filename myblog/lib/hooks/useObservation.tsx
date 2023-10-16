@@ -2,7 +2,7 @@ import { Dispatch, MutableRefObject, SetStateAction, useCallback, useEffect, use
 
 const defaultOption = {
   threshold: 0.5,
-  rootMargin: '-70px 0px -60% 0px',
+  rootMargin: '0px 0px -90% 0px',
 }
 export type ObservationType = Record<string, IntersectionObserverEntry>
 
