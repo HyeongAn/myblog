@@ -1,6 +1,6 @@
 ---
 title: 'React ContentEditable'
-description: '이전엔 <input>태그를 활용하여 입력할 text를 받았었는데, 이번 프로젝트를 진행하면서 <div>에서도 contentEditable이라는 속성으로 text입력을 받을 수 있다는걸 알았다. 이에 대한 방법과 코드를 기록해두려고 한다.'
+description: '이전엔 input태그를 활용하여 입력할 text를 받았었는데, 이번 프로젝트를 진행하면서 div태그에서도 contentEditable이라는 속성으로 text입력을 받을 수 있다는걸 알았다. 이에 대한 방법과 코드를 기록해두려고 한다.'
 coverImage: 'https://velog.velcdn.com/images/song961003/post/50ec1b07-d367-477f-80fb-6f3fbd91fc54/image.png'
 date: '2023/07/18'
 keywords: ['react', 'contenteditable', 'yoonhu']

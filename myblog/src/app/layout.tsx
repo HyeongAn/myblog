@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: '공부한 것을 적어두고 기록해두는 yoonhu의 블로그',
     images: 'https://yoonhu.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.bf63779c.jpg&w=3840&q=75',
     locale: 'ko_KR',
-    type: 'website',
+    type: 'article',
   },
 }
 

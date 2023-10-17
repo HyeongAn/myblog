@@ -1,7 +1,6 @@
 ---
 title: 'TypeScript Enum'
-description: 'TypeScript를 사용해보면서 새로운 타입을 알게되어 적어둔다.
-TypeScript는 기본의 타입이외에도 다른 타입을 더 제공하는데 그중 하나가 열거형이라고 부르는 enum이다. enum은 말그대로, 여러 값들에 미리 이름을 정의하여 열거해두고 사용하는 타입이다.'
+description: 'TypeScript를 사용해보면서 새로운 타입을 알게되어 적어둔다. TypeScript는 기본의 타입이외에도 다른 타입을 더 제공하는데 그중 하나가 열거형이라고 부르는 enum이다. enum은 말그대로, 여러 값들에 미리 이름을 정의하여 열거해두고 사용하는 타입이다.'
 coverImage: 'https://velog.velcdn.com/images/404/post/0769177d-7b12-493b-aa09-d5ba5a87f171/TS-logo.jpg'
 date: '2023/04/05'
 keywords: ['typescript', 'enum', 'treeshaking', 'uniontype', 'yoonhu']

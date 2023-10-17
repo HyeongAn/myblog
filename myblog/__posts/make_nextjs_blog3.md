@@ -1,13 +1,11 @@
 ---
-
 title: 'NextJS Blog (3)'
-description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다.'
+description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다. 이번에는 TOC(Table of Contents)를 만들어보면서 사용했던 방법과 트러블 슈팅에 대해 적어둔다.'
 coverImage: 'https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png'
 date: '2023/10/16'
 keywords: ['NextJS', 'NextJS13', 'Blog', 'react markdown', 'TOC', 'IntersectionObserver', 'yoonhu']
 category: 'makeblog'
 outline: 'NextJS v13으로 정적인 블로그를 만들어보며 겪었던, 해결했던 문제들을 적어둔다.'
-
 ---
 
 ![](https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png)
@@ -18,17 +16,17 @@ outline: 'NextJS v13으로 정적인 블로그를 만들어보며 겪었던, 해
 
 ## TOC (Table of Contents) 만들기
 
-현재의 블로그를 사용하기 전에는 velog를 사용했었는데 핸드폰이 아닌 데스크탑으로 보게 되면, 오른쪽에 목차가 나열되어 contents에 네비게이션 역할을 하는 것을 볼 수 있다. 그래서 이번 블로그를 만들때에는 TOC를 만들어 넣고 싶다는 생각이 있었다. 먼저 이 TOC에 관한 원리가 뭘까 하나하나 찾아보았는데 크게 2가지를 알면 좋을것 같았다. 
+현재의 블로그를 사용하기 전에는 velog를 사용했었는데 핸드폰이 아닌 데스크탑으로 보게 되면, 오른쪽에 목차가 나열되어 contents에 네비게이션 역할을 하는 것을 볼 수 있다. 그래서 이번 블로그를 만들때에는 TOC를 만들어 넣고 싶다는 생각이 있었다. 먼저 이 TOC에 관한 원리가 뭘까 하나하나 찾아보았는데 크게 2가지를 알면 좋을것 같았다.
 
 ### a tag href 속성에 #id를 이용하기
 
 방법에는 여러가지 방법이 있겠지만, 가장 간단하고 많이 사용하는 방법이 헤딩 태그 (h1, h2, ...,)를 추출해서 각각의 id값으로 이동하는 방법이 있겠다.
 
 ```html
-<a href='#id'>
+<a href="#id"></a>
 ```
 
-하지만 현재, `React-Markdown`을 사용하면서 헤딩 태그에 id값이 부여되어 있지 않은것을 볼 수 있었다. 이렇게 되면 `href`에 `#id`로 접근할 수 없을 것이다. 그렇다면 `HTML` 의 `id`를 부여하는 플러그인이 필요하겠다. 
+하지만 현재, `React-Markdown`을 사용하면서 헤딩 태그에 id값이 부여되어 있지 않은것을 볼 수 있었다. 이렇게 되면 `href`에 `#id`로 접근할 수 없을 것이다. 그렇다면 `HTML` 의 `id`를 부여하는 플러그인이 필요하겠다.
 
 ### rehype slug
 
@@ -84,8 +82,6 @@ const MarkdownView = ({ post }: MarkdownViewProps) => {
 export default MarkdownView
 ```
 
-
-
 ### IntersectionObserver 사용하기
 
 [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)는 기본적으로 브라우저의 뷰포트(Viewport)와 설정한 요소의 교차점을 관찰한다. 요소가 뷰포트에 포함되는지, 포함되지 않는지, 더 쉽게는 사용자 화면에 지금 보이는 요소인지 아닌지를 구별하는 기능을 제공한다.
@@ -99,8 +95,6 @@ const observe = new IntersectionObserver(callbak, options) // 관찰자를 초�
 observer(element) // 관찰할 요소를 등록한다.
 ```
 
-
-
 #### callback
 
 관찰할 대상이 등록되거나 가시성(보이는지, 보이지 않는지)에 변화가 생기면 관찰자는 callback을 실행한다. 콜백은 2개의 인수(entries, observer)를 가지게 된다.
@@ -112,7 +106,7 @@ observer(element)
 
 **entries**
 
-`entries`는 [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)의 인스턴스 배열이다. `entries`의 자세한 내용은 [Refs](https://heropy.blog/2019/10/27/intersection-observer/)에서 자세하게 볼 수 있다.
+`entries`는 [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)의 인스턴스 배열이다.
 
 - `boundingClientRect`: 관찰 대상의 사각형 정보([DOMRectReadOnly](https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly))
 
@@ -128,7 +122,11 @@ observer(element)
 
 - `time`: 변경이 발생한 시간 정보([DOMHighResTimeStamp](https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp))
 
-  
+<Blockquote type="info">
+
+`entries`의 자세한 내용은 [Refs](https://heropy.blog/2019/10/27/intersection-observer/)에서 자세하게 볼 수 있다.
+
+</Blockquote>
 
 **observer**
 
@@ -139,14 +137,12 @@ const observe = new IntersectionObserver((entries, observer) => {
   ...
 }, options)
 
-observer(element)  
+observer(element)
 ```
-
-
 
 ### Options
 
-- `root`:  타겟의 가시성을 검사하기 위해 뷰포트 대신 사용할 요쇼 객체를 지정한다. 타겟의 조상 요소이어야 하며 지정하지 않거나 `null`일 경우 브라우저의 뷰포트가 기본 사용된다. (기본값은 `null`)
+- `root`: 타겟의 가시성을 검사하기 위해 뷰포트 대신 사용할 요쇼 객체를 지정한다. 타겟의 조상 요소이어야 하며 지정하지 않거나 `null`일 경우 브라우저의 뷰포트가 기본 사용된다. (기본값은 `null`)
 
 - `rootMargin`: `margin`을 이용해 `root` 범위를 확장하거나 축소할 수 있다. `css`에서 사용하는 `margin`과 같이 여백을 설정할 수 있으며 단위를 꼭 입력해야한다.
 
@@ -158,8 +154,6 @@ observer(element)
     threshold: [0, 0.3, 1] // 타겟의 가시성이 0%, 30%, 100%일 때 모두 옵저버가 실행된다.
   })
   ```
-
-
 
 ### Instance Methods
 
@@ -210,8 +204,6 @@ observe1.disconnect(h) // observe1이 관찰하는 요소(h) 관찰을 중지한
 
 모든 주시 대상에 대한 배열을 반환한다.
 
-
-
 ## TOC 생성
 
 TOC를 만들기 위한 useObservation을 구현하기에 먼저 앞서 첫 번째 방법으로 헤더 태그에 있는 `id`값을 가져와야한다. TOC 컴포넌트를 만들고 헤더 태그를 HTMLElement 배열로 가져오도록 하면 되겠다.
@@ -247,16 +239,12 @@ export default TOC
 
 ### Unhandled Runtime Error Error: document is not defined
 
-
-
 <Blockquote type="danger">
   Unhandled Runtime Error
 	Error: document is not defined
 </Blockquote>
 
-
-
-이러한 에러가 나는 이유는 쉽게 유추할 수 있다.  `document`나 `window` 객체는 브라우저의 기능이기 때문이다. 즉, 클라이언트 측에서 정의된 전역 변수인 것이다. 서버측의 코드에서는 브라우저 객체에 엑세스할 수 없기 때문에 이러한 에러가 나타나는 것이다.
+이러한 에러가 나는 이유는 쉽게 유추할 수 있다. `document`나 `window` 객체는 브라우저의 기능이기 때문이다. 즉, 클라이언트 측에서 정의된 전역 변수인 것이다. 서버측의 코드에서는 브라우저 객체에 엑세스할 수 없기 때문에 이러한 에러가 나타나는 것이다.
 
 즉 위의 문제를 해결하려면 클라이언트에서 렌더링이 된 후에 사용해야하는 것이다. 해결법으로는 크게 3가지가 있겠다.
 
@@ -284,20 +272,18 @@ if (process.browser) {
 
 ### useEffect 사용
 
- `useEffect`는 클라이언트에서 컴포넌트가 마운트 된다음 실행하게 할 수 있다. 즉 클라이언트에서 사용할 수 있으므로 `useEffect`를 사용하는 것도 방법이 될 수 있겠다.
+`useEffect`는 클라이언트에서 컴포넌트가 마운트 된다음 실행하게 할 수 있다. 즉 클라이언트에서 사용할 수 있으므로 `useEffect`를 사용하는 것도 방법이 될 수 있겠다.
 
 ```tsx
 const [headingEls, setHeadingEls] = useState<HTMLElement[]>([])
 
-  useEffect(() => {
-    const headingElements: HTMLElement[] = Array.from(document.querySelectorAll('h1, h2, h3'))
-    setHeadingEls(headingElements)
+useEffect(() => {
+  const headingElements: HTMLElement[] = Array.from(document.querySelectorAll('h1, h2, h3'))
+  setHeadingEls(headingElements)
 }, [])
 ```
 
-
-
-나는 위의 방법들중  `useEffect`를 사용하여 접근했고 `HTMLElement`를 list의 형태로 가져올 수 있었다.
+나는 위의 방법들중 `useEffect`를 사용하여 접근했고 `HTMLElement`를 list의 형태로 가져올 수 있었다.
 
 ```tsx
 'use client'
@@ -334,9 +320,7 @@ const TOC = () => {
 export default TOC
 ```
 
-현재 보고있는 헤더 태그를 기억할 state를 `currentId`를 만들고 `observe`를 걸어두어 해당  `id`를 관찰하고 해당 뷰포트(Viewport)를 넘어가면 다음 `id`를 `currentId`로 저장해 두면 되겠다.
-
-
+현재 보고있는 헤더 태그를 기억할 state를 `currentId`를 만들고 `observe`를 걸어두어 해당 `id`를 관찰하고 해당 뷰포트(Viewport)를 넘어가면 다음 `id`를 `currentId`로 저장해 두면 되겠다.
 
 ### useObservation 생성
 
@@ -351,7 +335,6 @@ const defaultOption = {
 export type ObservationType = Record<string, IntersectionObserverEntry>
 
 const useObservation = (setState: Dispatch<SetStateAction<string>>, headingElements: HTMLElement[]) => {
-
   // heading element를 담아서 사용하기 위한 ref.
   const headingElementsRef: MutableRefObject<ObservationType> = useRef({})
 
@@ -390,61 +373,20 @@ const useObservation = (setState: Dispatch<SetStateAction<string>>, headingEleme
   }, [])
 
   useEffect(() => {
-    
     // IntersectionObserver에 위에서 만든 callback 함수인 handleIntersect 함수를 넘겨주어 새로운 인스턴스 생성.
     const observe = new IntersectionObserver(handleIntersect, defaultOption)
-    
+
     // 헤더 태그 요소들을 observer로 관찰한다.
     headingElements.map((header) => {
       observe.observe(header)
     })
-    
-    // 컴포넌드가 언마운트 되었을 경우 observe의 관찰을 멈춘다. 
-    return () => observe.disconnect();
-    
+
+    // 컴포넌드가 언마운트 되었을 경우 observe의 관찰을 멈춘다.
+    return () => observe.disconnect()
   }, [headingElements])
 }
 
 export default useObservation
 ```
 
-이번에 만든  `useObservation`을 뭔가 하나하나 설명하기 보다는 각각의 어떤 의미로 작성이 되었는지를 주석으로 달아두었다. `rootMargin`의 값을 바꿔서 감지하고 싶은 영역을 조금씩 바꿔봐도 좋을것 같다.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+이번에 만든 `useObservation`을 뭔가 하나하나 설명하기 보다는 각각의 어떤 의미로 작성이 되었는지를 주석으로 달아두었다. `rootMargin`의 값을 바꿔서 감지하고 싶은 영역을 조금씩 바꿔봐도 좋을것 같다.

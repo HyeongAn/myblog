@@ -1,7 +1,7 @@
 ---
 title: 'NextJS Blog (1)'
 
-description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다.'
+description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다. styled-componens를 적용하고, Next.js의 image 태그를 사용하면서 나타난 트러블 슈팅을 기록하고자 한다.'
 
 coverImage: 'https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png'
 

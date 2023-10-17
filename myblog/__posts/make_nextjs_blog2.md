@@ -1,7 +1,7 @@
 ---
 title: 'NextJS Blog (2)'
 
-description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다.'
+description: '이전에 원티드 Pre-on-Boarding에서 배운 NextJS를 좀 더 활용하고자 정적인 Blog를 만들어 본다. 이번엔 NextJS v13의 `Dynamic Routes`의 `Segment`, `Loading / Error UI`, 마크다운 변환에 관한 `React-MarkDown`과 플러그인에 대해 사용했던 방법들과 트러블 슈팅에 대해 적어보겠다.'
 
 coverImage: 'https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png'
 

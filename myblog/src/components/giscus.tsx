@@ -13,7 +13,7 @@ const Giscus = () => {
     script.setAttribute('data-repo-id', 'R_kgDOKKvKkA')
     script.setAttribute('data-input-position', 'bottom')
     script.setAttribute('data-lang', 'ko')
-    script.setAttribute('data-category', 'Announcements')
+    script.setAttribute('data-category', 'General')
     script.setAttribute('data-category-id', 'DIC_kwDOKKvKkM4CZn3P')
     script.setAttribute('data-theme', theme === 'dark' ? 'dark_dimmed' : 'light_protanopia')
     script.setAttribute('crossorigin', 'anonymous')

@@ -1,6 +1,6 @@
 ---
 title: 'React Portal'
-description: '프로젝트를 진행하다보면 모달창이 필요할때가 있다. 이 모달창이 어떠한 컴포넌트에서 떠야할지 조절하는건 물론 개발자의 몫이겠지만, 대부분 최상위에 띄워져 사용자의 다음 스텝에 영향을 줄 수 있도록 만드는것이 목적이다.'
+description: '프로젝트를 진행하다보면 모달창이 필요할때가 있다. 이 모달창이 어떠한 컴포넌트에서 떠야할지 조절하는건 물론 개발자의 몫이겠지만, 대부분 최상위에 띄워져 사용자의 다음 스텝에 영향을 줄 수 있도록 만드는것이 목적이다. 이를 편리하게 해줄 수 있는것이 react의 portal이다. portal을 사용하는 방법과 특징에 대해 기록해 둔다.'
 coverImage: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/0*yLEo2vsGtTj3JvZ9.jpg'
 date: '2023/08/25'
 keywords: ['react', 'portal', 'yoonhu', 'modal', 'component']
