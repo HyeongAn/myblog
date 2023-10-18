@@ -8,7 +8,7 @@ category: 'makeblog'
 outline: 'NextJS v13으로 정적인 블로그를 만들어보며 겪었던, 해결했던 문제들을 적어둔다.'
 ---
 
-![](https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png)
+![nextjs로 블로그 만들기 이미지](https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png)
 
 # NextJS 정적 블로그 만들기
 

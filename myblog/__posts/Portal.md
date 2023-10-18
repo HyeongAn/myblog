@@ -8,7 +8,7 @@ category: 'react'
 outline: 'React Portal로 페이지의 가장위에 띄워지는 모달을 만들어보자.'
 ---
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*yLEo2vsGtTj3JvZ9.jpg)
+![react portal 이미지](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*yLEo2vsGtTj3JvZ9.jpg)
 
 # Portal
 
@@ -174,11 +174,11 @@ export default Modal
 
 ### 실행
 
-![](https://velog.velcdn.com/images/ahsy92/post/ec4fffb4-dfe2-4172-9d52-b5bdc0dc2b1a/image.gif)
+![react portal로 띄운 이미지](https://velog.velcdn.com/images/ahsy92/post/ec4fffb4-dfe2-4172-9d52-b5bdc0dc2b1a/image.gif)
 
 예상한 것처럼 Modal이 잘 띄워지는 것을 확인할 수 있고, 개발자도구의 Element를 확인해보니 아래와 같이 `<div id="root">`가 아닌, `<div id='portal'>`에서 컴포넌트가 마운트 되는 것을 볼 수 있다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/36fac88c-af2a-4e12-99ba-650d805071e3/image.gif)
+![id='portal'에 띄워진 모달 콘솔에서 확인하기](https://velog.velcdn.com/images/ahsy92/post/36fac88c-af2a-4e12-99ba-650d805071e3/image.gif)
 
 ## 정리
 

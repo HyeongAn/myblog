@@ -1,11 +1,6 @@
 'use client'
 import { MainFeatureController } from '@/components/style/main'
-import Image from 'next/image'
-import leftArrow from '../../../../assets/svg/left-arrow.svg'
-import rightArrow from '../../../../assets/svg/right-arrow.svg'
-import pausedIcon from '../../../../assets/svg/stop-icon.svg'
-import playIcon from '../../../../assets/svg/play-icon.svg'
-import { ControllerButton } from '@/components/style/buttons/button'
+import { IndexControlButton, ControllerButton } from '@/components/style/buttons/button'
 import { ControllerProps } from '../../../../types/props'
 import SvgStyle from '@/components/style/svg-style'
 
@@ -20,35 +15,26 @@ const MainFeaturedController = ({
   return (
     <MainFeatureController>
       <div>
-        {/* <Image src={leftArrow} alt="left arrow" style={{ cursor: 'pointer' }} onClick={() => onPrevClick()} /> */}
-        <div onClick={() => onPrevClick()}>
+        <ControllerButton onClick={() => onPrevClick()}>
           <SvgStyle image="left" />
-        </div>
+        </ControllerButton>
         {isPaused ? (
-          // <Image src={playIcon} alt="stop icon" style={{ cursor: 'pointer' }} onClick={() => setIsPaused(!isPaused)} />
-          <div onClick={() => setIsPaused(!isPaused)}>
+          <ControllerButton onClick={() => setIsPaused(!isPaused)}>
             <SvgStyle image="play" />
-          </div>
+          </ControllerButton>
         ) : (
-          // <Image
-          //   src={pausedIcon}
-          //   alt="stop icon"
-          //   style={{ cursor: 'pointer' }}
-          //   onClick={() => setIsPaused(!isPaused)}
-          // />
-          <div onClick={() => setIsPaused(!isPaused)}>
+          <ControllerButton onClick={() => setIsPaused(!isPaused)}>
             <SvgStyle image="stop" />
-          </div>
+          </ControllerButton>
         )}
-        {/* <Image src={rightArrow} alt="right arrow" style={{ cursor: 'pointer' }} onClick={() => onNextClick()} /> */}
-        <div onClick={() => onNextClick()}>
+        <ControllerButton onClick={() => onNextClick()}>
           <SvgStyle image="right" />
-        </div>
+        </ControllerButton>
       </div>
       <div style={{ gap: '6px' }}>
         {Array.from({ length: 5 }).map((_, index) => {
           return (
-            <ControllerButton
+            <IndexControlButton
               $isClick={index === currentIndex}
               key={`controller-button-${index}`}
               onClick={() => setCurrentIndex(index)}

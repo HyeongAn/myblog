@@ -8,7 +8,7 @@ category: 'javascript'
 outline: '데이터나 컴포넌트의 분기에 사용하는 switch와 if에 대해 깊게 비교해보자.'
 ---
 
-![](https://velog.velcdn.com/images/0sunset0/post/c04d97d3-660b-4530-a000-48a08c5c64ea/clean%20code.png)
+![clean code를 위한 이미지](https://velog.velcdn.com/images/0sunset0/post/c04d97d3-660b-4530-a000-48a08c5c64ea/clean%20code.png)
 
 # Switch와 If
 
@@ -107,9 +107,9 @@ const findName2 = (name: string) => {
 위의 예제를 개발자도구로 살펴보면, 아래와 같이 실행되는것을 볼 수 있다.
 
 **Switch**
-![](https://velog.velcdn.com/images/ahsy92/post/0dc21602-796e-4e1d-aa87-5d00cb878927/image.gif)
+![switch의 흐름 이미지](https://velog.velcdn.com/images/ahsy92/post/0dc21602-796e-4e1d-aa87-5d00cb878927/image.gif)
 **If**
-![](https://velog.velcdn.com/images/ahsy92/post/6f882254-1b91-434a-b006-7eea75d82a1b/image.gif)
+![if의 흐름 이미지](https://velog.velcdn.com/images/ahsy92/post/6f882254-1b91-434a-b006-7eea75d82a1b/image.gif)
 
 switch문은 위의 해당 `name`이 case와 같을 경우를 찾아 jumping하는 것을 볼 수 있다. 반면 if문의 경우에는 if문을 하나씩 순회하면서 같은 조건을 찾아 가는것을 볼 수 있다.
 

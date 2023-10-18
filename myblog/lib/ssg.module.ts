@@ -5,10 +5,6 @@ import { unified } from 'unified'
 import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'
-import { cache } from 'react'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeSlug from 'rehype-slug'
 
 export const getPosts = async () => {
   const filePath = path.join(process.cwd(), '__posts')

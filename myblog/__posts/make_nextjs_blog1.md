@@ -14,7 +14,7 @@ category: 'makeblog'
 outline: 'NextJS v13으로 정적인 블로그를 만들어보자.'
 ---
 
-![](https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png)
+![nextjs로 블로그 만들기 이미지](https://velog.velcdn.com/images/ahsy92/post/8077a889-90ed-4696-acfa-5fb34d3c8a9f/image.png)
 
 # NextJS 정적 블로그 만들기
 
@@ -118,7 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ### className did not match.
 
-![](https://velog.velcdn.com/images/ahsy92/post/c8d0e830-7f37-4238-ad1a-959952966685/image.png)
+![className did not match 이미지](https://velog.velcdn.com/images/ahsy92/post/c8d0e830-7f37-4238-ad1a-959952966685/image.png)
 
 <Blockquote type="warn">
 	Warning: Prop `className` did not match.

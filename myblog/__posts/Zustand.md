@@ -8,7 +8,7 @@ category: 'react'
 outline: 'React Zustand를 사용해보자.'
 ---
 
-![](https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png)
+![zustand 대표이미지](https://velog.velcdn.com/images/ahsy92/post/39aa2db4-366c-4267-a6b9-c2e7592b4833/image.png)
 
 이전엔 `Redux(Tool-kit)`을 사용하면서 다른 상태관리를 사용해본적은 없었다. 하지만 이번 프로젝트를 진행하면서 `Zustand`라는 상태관리 라이브러리를 사용해 봤는데 보일러플레이트 코드가 길지 않아서 좋았고, 무엇보다 너무 편하게 사용할 수 있어서 좋았다.
 

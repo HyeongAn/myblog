@@ -108,7 +108,7 @@ export const IconLink = style.a`
   justify-content: center;
 `
 
-export const ControllerButton = style.button<ControllerProps>`
+export const IndexControlButton = style.button<ControllerProps>`
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -116,7 +116,16 @@ export const ControllerButton = style.button<ControllerProps>`
   cursor: pointer;
   background: ${(props) => (props.$isClick ? 'var(--font--color)' : 'transparent')};
   padding: 0;
-  
+`
+
+export const ControllerButton = style.button`
+  width 24px;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 `
 
 export const rotate_image = keyframes`

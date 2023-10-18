@@ -8,7 +8,7 @@ category: 'javascript'
 outline: '프로젝트를 진행하며 재귀컴포넌트를 만들었을 떄 사용했던 ES6에 추가된 Generator와 Yield에대해 자세히 알아보자.'
 ---
 
-![](https://velog.velcdn.com/images/hanblueblue/post/3a0b0464-a4f4-44b9-820a-d14e47f98eec/js.png)
+![js이미지](https://velog.velcdn.com/images/hanblueblue/post/3a0b0464-a4f4-44b9-820a-d14e47f98eec/js.png)
 
 프로젝트에서 vs코드와 비슷한 탭분할의 기능을 만들기 위해 사용했던 `Generator`와 `Yield`이다. JavaScript뿐만 아니라, 다른 언어에서 지원했던 기능을 ES6부터 사용가능하게 되었다고한다.
 
@@ -51,10 +51,10 @@ function* call() {
 
 자, 위의 `yield`와 `next()`를 보았으면 대충 위의 예제가 어떻게 출력이 될지 예상이 되겠다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/8703814f-931f-4c55-b64d-b10a9e4d8ee2/image.jpg)
+![generator와 yield의 결과 이미지](https://velog.velcdn.com/images/ahsy92/post/8703814f-931f-4c55-b64d-b10a9e4d8ee2/image.jpg)
 위의 경우는 `next()`함수를 사용하여 `generator`의 결과를 나타낸 것이다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/221511d0-46ff-42f1-a894-1f7dd81dd02c/image.jpg)
+![next함수를 사용하여 generator의 결과 이미지](https://velog.velcdn.com/images/ahsy92/post/221511d0-46ff-42f1-a894-1f7dd81dd02c/image.jpg)
 
 for문을 사용해서 결과를 볼 수도 있다.
 
@@ -332,10 +332,10 @@ console.log(callingGenerator.next())
 ```
 
 위의 예제의 결과를 보면 아래의 사진과 같다.
-![](https://velog.velcdn.com/images/ahsy92/post/5feffdf4-b2ff-4223-9408-514b65026970/image.jpg)
+![generator함수에 컨텍스트를 위임했을때의 결과 이미지](https://velog.velcdn.com/images/ahsy92/post/5feffdf4-b2ff-4223-9408-514b65026970/image.jpg)
 
 위의 예제에서 `call()`함수를 호출하면 객체가 반환되지만 실제로 `call()`함수가 실행되지는 않는다.
-![](https://velog.velcdn.com/images/ahsy92/post/05acdd81-f803-4c10-b8d5-b6ef3a565ae5/image.jpg)
+![call 함수가 실행되지 않는 이미지](https://velog.velcdn.com/images/ahsy92/post/05acdd81-f803-4c10-b8d5-b6ef3a565ae5/image.jpg)
 
 #### iterable Generator
 

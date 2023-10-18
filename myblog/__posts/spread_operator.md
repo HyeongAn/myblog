@@ -8,7 +8,7 @@ category: 'javascript'
 outline: 'ES6부터 나온 ...을 사용한 새로운 형태의 문법이 추가되었다.'
 ---
 
-![](https://miro.medium.com/v2/resize:fit:2000/format:webp/1*24ayqOY008AvW_VmkqsYdA.png)
+![es6 spread operator 이미지](https://miro.medium.com/v2/resize:fit:2000/format:webp/1*24ayqOY008AvW_VmkqsYdA.png)
 
 # Spread Operator
 

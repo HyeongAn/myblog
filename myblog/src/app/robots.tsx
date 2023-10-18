@@ -5,9 +5,9 @@ const Robots = (): MetadataRoute.Robots => {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/lib',
+      disallow: '/lib/',
     },
-    sitemap: ['https://yoonhu.vercel.app/sitemap.xml'],
+    sitemap: 'https://yoonhu.vercel.app/sitemap.xml',
   }
 }
 

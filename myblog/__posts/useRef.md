@@ -8,7 +8,7 @@ category: 'react'
 outline: 'React useRef에 대해 자세히 알아보려고 쓴글이다.'
 ---
 
-![](https://velog.velcdn.com/images/sehee-xx/post/81896c49-0df4-4368-8eee-474630625822/image.jpeg)
+![react useref 이미지](https://velog.velcdn.com/images/sehee-xx/post/81896c49-0df4-4368-8eee-474630625822/image.jpeg)
 
 사실 `Ref`에 관한 포스팅을 여러번 했었다. 부모컴포넌트에서 자식컴포넌트 호출하기 위한 `forwordRef`, `onBlur`, `onFocus`를 사용하면서 `Ref`를 직접 사용가기도 하고 `focus`설정이라던지, `contentEditable`을 사용할때도 사용했다. 사실 React를 사용하다보면 엘리먼트를 직접 선택해서 사용하는 경우가 많았다.
 
@@ -190,7 +190,7 @@ export default Test
 
 `useRef`의 결과 값은 항상 위와 같은 타입을 갖게 된다. React 컴포넌트 안에서 `useRef`를 콘솔로 찍어보면 아래와 같이 나오게 된다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/ca6ad255-7771-43ec-8834-e260d286b1c8/image.jpg)
+![ref의 current 이미지](https://velog.velcdn.com/images/ahsy92/post/ca6ad255-7771-43ec-8834-e260d286b1c8/image.jpg)
 
 특별한게 없어보이지만 자세한 이야기는 아래의 `useRef`의 타입을 보면 더 자세하게 이해할 수 있겠다.
 
@@ -326,7 +326,7 @@ export default Test
 
 다면 여기서 주의해야할 점은 `.current`프로퍼티를 변경하는것 자체가 리렌더링을 발생시키지는 않는 것이다. 만약 React가 DOM 노드에 `ref`를 추가하거나 제거할 때 코드를 실행하려면 `callbackRef`를 사용해야한다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/5a8ad04d-ab2b-46de-a0dc-43648cca7c54/image.jpg)
+![ref를 추가하거나 제거했을 경우의 이미지](https://velog.velcdn.com/images/ahsy92/post/5a8ad04d-ab2b-46de-a0dc-43648cca7c54/image.jpg)
 
 ---
 
@@ -442,7 +442,7 @@ export default Test
 
 `input element`를 `ref`로 받아서 버튼을 클릭하면 `input`의 `value`를 직접 빈 문자열로 수정하는 예제이다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/e0eee8dd-f981-4cbe-b624-b346c2b5b0f8/image.gif)
+![input element를 ref로 받았을때의 예시 이미지](https://velog.velcdn.com/images/ahsy92/post/e0eee8dd-f981-4cbe-b624-b346c2b5b0f8/image.gif)
 
 이 경우에는 위의 결과를 보면 정상적으로 작동하는 것을 볼 수 있다. `.current`의 프로퍼티만 읽기 전용이므로 `.current`의 하위 프로퍼티인 `.value`는 여전히 수정 가능한 상태이다. 이는 `readonly`가 shallow(얕기)하기 때문이다.
 
@@ -475,7 +475,7 @@ const Test = () => {
 export default Test
 ```
 
-![](https://velog.velcdn.com/images/ahsy92/post/a6c7874b-7e96-408f-b1d9-20f59b03a1c1/image.png)
+![refobject를 ref프로퍼티에 할당했을 때 나타나는 에러이미지](https://velog.velcdn.com/images/ahsy92/post/a6c7874b-7e96-408f-b1d9-20f59b03a1c1/image.png)
 
 현재 `ref` 프로퍼티는 `RefObject`형만 받는데 `inputRef`는 정의상 `MutableRefObject`가 되고, 이를 `ref`프로퍼티에 집어넣으려고 해서 발생하는 에러인 것이다.
 

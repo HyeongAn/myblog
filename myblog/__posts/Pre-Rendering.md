@@ -20,7 +20,7 @@ category: 'nextjs'
 outline: 'NextJS v13으로 개인 Blog를 만들기위한 기초 여정에 관한 기록을 적어둔다.'
 ---
 
-![](https://velog.velcdn.com/images/gwak2837/post/8be6cb7e-1450-41cf-800a-b82e96dd2eef/image.png)
+![nextjs 이미지](https://velog.velcdn.com/images/gwak2837/post/8be6cb7e-1450-41cf-800a-b82e96dd2eef/image.png)
 
 # NextJs Pre-Rendering
 
@@ -44,7 +44,7 @@ NextJs에서는 두 가지 `Pre-Rendering`을 제공하고 있다. 바로 정적
 
 `Pre-Rendering`은 `NextJs`에서 가장 중요한 개념인데, 간단하게 말하자면 `HTML`을 미리 만들어 두는것을 말한다. 앞서 CSR과 SSR에 대해 설명했었다. 이 두가지의 개념을 합쳐놓은 것이 `Pre-Rendering`의 기초라고 할 수 있는데, 페이지가 사용자의 요청에 의해 보여질때 미리 생성된 HTML을 먼저 보여주고 JS를 로드하여 이후의 페이지는 React로 즉, CSR로 구동하는 방식인 것이다.
 
-![](https://velog.velcdn.com/images/ahsy92/post/e43417fd-ffa9-46b9-920e-bcb8f40e1851/image.png)
+![pre rendering 이미지](https://velog.velcdn.com/images/ahsy92/post/e43417fd-ffa9-46b9-920e-bcb8f40e1851/image.png)
 
 - Initial Load : JS 동작이 없는 HTML을 먼저 화면에 보여준다. (JS 파일 로드 전으로 이벤트나 Link 등 동작은 하지 않음)
 - Hydration: Initial Load 이후 JS 파일을 HTML에 연결하는 과정이다. (React 컴포넌트가 초기화)
