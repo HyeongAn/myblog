@@ -50,7 +50,10 @@ export const generateMetadata = async ({ params }: CategoryProps): Promise<Metad
     generator: 'Next.js',
     creator: 'yoonhu',
     publisher: 'Vercel',
-    verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
+    verification: {
+      google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok',
+      other: { 'naver-site-verification': 'ab105e771ba4e08bd9ffccb86f543870851cfd1a' },
+    },
     openGraph: {
       url: `https://yoonhu.vercel.app/blog/${params.category}`,
       siteName: 'yoonhu blog',

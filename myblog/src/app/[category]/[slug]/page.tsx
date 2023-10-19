@@ -51,7 +51,10 @@ export const generateMetadata = async ({ params }: PostProps): Promise<Metadata>
     creator: 'yoonhu',
     publisher: 'Vercel',
     keywords: data.keywords,
-    verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
+    verification: {
+      google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok',
+      other: { 'naver-site-verification': 'ab105e771ba4e08bd9ffccb86f543870851cfd1a' },
+    },
     openGraph: {
       url: `https://yoonhu.vercel.app/${params.category}/${params.slug}`,
       siteName: 'yoonhu blog',

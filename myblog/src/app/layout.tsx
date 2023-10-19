@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   keywords: ['nextjs', 'react', 'yoonhu blog', '윤후', '윤후 블로그'],
   creator: 'Yoonhu',
   publisher: 'Vercel',
-  verification: { google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok' },
+  verification: {
+    google: 'kRu5kbZA9fbwfFBkXI_jDIKKgfLjTRu04O_eGfG42Ok',
+    other: { 'naver-site-verification': 'ab105e771ba4e08bd9ffccb86f543870851cfd1a' },
+  },
   icons: {
     icon: '/favicon.ico',
   },
