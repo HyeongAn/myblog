@@ -31,7 +31,7 @@ CSS-in-JS와 같은 경우엔 JS코드가 적용되지 않은 페이지가 먼�
 
 NextJS 13버전에서는 \_document는 사용하지 않기 때문에 아래와 같은 예시코드로 children을 받아 감싸주는 식으로 적용해주어야 한다.
 
-다만 Styled-component의 버전에 따라 rgistry의 형식이 다르다. 먼저 최소한의 NextJS에서 Styled-component의 버전은 v5.1.0부터 지원이 되고 v6이전까지는 아래의 컴포넌트로 감싸주면 되겠다. [공식문서](https://nextjs.org/docs/app/building-your-application/styling/css-in-js)
+다만 Styled-component의 버전에 따라 registry의 형식이 다르다. 먼저 최소한의 NextJS에서 Styled-component의 버전은 v5.1.0부터 지원이 되고 v6이전까지는 아래의 컴포넌트로 감싸주면 되겠다. [공식문서](https://nextjs.org/docs/app/building-your-application/styling/css-in-js)
 
 ```tsx
 // lib/registry
