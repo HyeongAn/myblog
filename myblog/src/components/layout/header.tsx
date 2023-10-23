@@ -3,10 +3,12 @@ import Link from 'next/link'
 import { HeadContainer } from '../style/container'
 import { useContext, useEffect, useState } from 'react'
 import Image from 'next/image'
-import { DarkThemeButton, LightThemeButton, ThemeButton } from '../style/buttons/button'
+import { ControllerButton, DarkThemeButton, LightThemeButton, ThemeButton } from '../style/buttons/button'
 import moon from '../../../assets/svg/moon-icon.svg'
 import sun from '../../../assets/svg/sun-icon.svg'
+import wifi from '../../../assets/svg/wifi-icon.svg'
 import { themeContext } from '../../../lib/context.module'
+import SvgStyle from '../style/svg-style'
 
 interface HeaderProps {
   xWidth: number
@@ -62,8 +64,18 @@ const Header = ({ xWidth }: HeaderProps) => {
         >
           About
         </Link>
-        <Link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Blog Feed RSS">
-          rss
+        <Link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/rss.xml"
+          title="Blog Feed RSS"
+          style={{ width: '40px', height: '40px' }}
+        >
+          <ControllerButton
+            style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <SvgStyle image="wifi" />
+          </ControllerButton>
         </Link>
         <DarkThemeButton>
           <ThemeButton onClick={() => themeModeHandle()}>

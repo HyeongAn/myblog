@@ -118,7 +118,7 @@ export const IndexControlButton = style.button<ControllerProps>`
   padding: 0;
 `
 
-export const ControllerButton = style.button`
+export const ControllerButton = style.div`
   width 24px;
   height: 24px;
   cursor: pointer;
