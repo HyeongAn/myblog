@@ -62,6 +62,9 @@ const Header = ({ xWidth }: HeaderProps) => {
         >
           About
         </Link>
+        <Link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Blog Feed RSS">
+          rss
+        </Link>
         <DarkThemeButton>
           <ThemeButton onClick={() => themeModeHandle()}>
             <Image src={sun} alt="light theme icon" />

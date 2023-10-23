@@ -1,7 +1,6 @@
 import PostList from '@/components/home/posts/posts-list'
 import Main from '../components/home/main/main'
 import SlideMenuProfile from '@/components/slidemenu/slide-menu-profile'
-import generateRss from '../../lib/generateRss'
 
 // main home page
 const Home = () => {
