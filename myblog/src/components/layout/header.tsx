@@ -53,7 +53,7 @@ const Header = ({ xWidth }: HeaderProps) => {
           margin: '20px 20px',
         }}
       >
-        An.
+        Hu.
       </Link>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         {/* {width >= 640 ? ( */}
@@ -69,10 +69,17 @@ const Header = ({ xWidth }: HeaderProps) => {
           type="application/rss+xml"
           href="/rss.xml"
           title="Blog Feed RSS"
-          style={{ width: '40px', height: '40px' }}
+          style={{ width: '60px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           <ControllerButton
-            style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            style={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '10px',
+            }}
           >
             <SvgStyle image="wifi" />
           </ControllerButton>
