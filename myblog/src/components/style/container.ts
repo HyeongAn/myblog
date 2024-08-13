@@ -109,7 +109,6 @@ export const MainBodyContainer = style.div`
 export const FooterContainer = style.footer`
   display: flex;
   width: 100%;
-  min-width: 390px;
   min-height: 100px;
   font-size: 12px;
   justify-content: center;
@@ -208,7 +207,6 @@ export const PostContainer = style.div`
 export const TitleContainer = style.div`
   width: 100%;
   max-width: 900px;
-  min-width: 380px;
   min-height: 100px;
   display: flex;
   flex-direction: column;

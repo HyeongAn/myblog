@@ -28,7 +28,7 @@ const DetailPage = ({ content, postData }: DetailPageProps) => {
           damping: 20,
         }}
       >
-        <ContentsContainer style={{ maxWidth: '768px', position: 'relative' }}>
+        <ContentsContainer style={{ position: 'relative' }}>
           <div style={{ position: 'absolute', left: '100%' }}>
             <TOCAside>
               <TOC />

@@ -7,10 +7,12 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  min-width: 390px;
   font-family: Helvetica, Arial, sans-serif;
   /* background: #303030;
   color: white; */
+  @media (min-width: 768px) {
+    padding: 0 20px;
+  }
 }
 
 body[data-theme='dark'] {

@@ -22,13 +22,11 @@ const Layout = ({ children }: LayoutProps) => {
   }
 
   return (
-    <>
-      <themeContext.Provider value={contextTheme}>
-        <Header xWidth={300} />
-        <main style={{ flex: '1' }}>{children}</main>
-        <Footer />
-      </themeContext.Provider>
-    </>
+    <themeContext.Provider value={contextTheme}>
+      <Header xWidth={300} />
+      <main style={{ width: '100%' }}>{children}</main>
+      <Footer />
+    </themeContext.Provider>
   )
 }
 

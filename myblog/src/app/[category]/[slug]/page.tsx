@@ -20,7 +20,7 @@ const Post = async ({ params }: PostProps) => {
         <h1 style={{ marginBottom: '15px' }}>{data.title}</h1>
         <RowLeftContainer style={{ gap: '10px' }}>
           <CarouselRoundDiv>{data.category}</CarouselRoundDiv>
-          <span style={{ color: '#202125', marginTop: 'auto' }}>{data.date}</span>
+          <span style={{ color: '#202125' }}>{data.date}</span>
         </RowLeftContainer>
       </TitleContainer>
       <DetailPage content={content} postData={postData} />
